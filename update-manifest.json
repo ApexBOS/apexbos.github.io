@@ -1,0 +1,14 @@
+{
+  "version": "0.2.19",
+  "publishedAt": "2026-10-12T06:45:01Z",
+  "notes": {
+    "en": "- Settings → About → App updates: the app can now check for updates. Tap Check for updates; when a newer ApexBOS is out you see what changed (Myanmar or English) and Download gets the signed APK from the ApexBOS download page, https://apexbos.github.io (the app never checks or installs by itself). Update every device of a business together, and make a Backup first.\n- Phones still on an old test (debug) build cannot update over it: one time only — Backup, uninstall, install the new APK, Restore, then pair the device again.",
+    "my": "- ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ်: အက်ပ်က အပ်ဒိတ် စစ်နိုင်ပါပြီ။ အဆင့်မြှင့်မှု စစ်မည် ကို နှိပ်ပါ၊ ApexBOS ဗားရှင်းအသစ် ထွက်လျှင် ဘာပြောင်းသလဲ (မြန်မာ သို့မဟုတ် အင်္ဂလိပ်) ပြပြီး ဒေါင်းလုဒ် က ApexBOS ဒေါင်းလုဒ် စာမျက်နှာ https://apexbos.github.io မှ လက်မှတ်ထိုးထားသော APK ကို ယူပေးပါသည် (အက်ပ်က ကိုယ်တိုင် မစစ်ပါ၊ ကိုယ်တိုင် မထည့်သွင်းပါ)။ လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို အတူတူ အပ်ဒိတ်လုပ်ပြီး Backup အရင်လုပ်ပါ။\n- စမ်းသပ် (debug) ဗားရှင်းဟောင်း သုံးနေသော ဖုန်းများသည် အပ်ဒိတ် တိုက်ရိုက် မရပါ — တစ်ကြိမ်သာ: Backup လုပ်၊ အက်ပ်ကို ဖြုတ်၊ APK အသစ် ထည့်၊ Restore လုပ်ပြီး စက်ကို ပြန်ချိတ်ပါ။"
+  },
+  "platforms": {
+    "android": {
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.19/ApexBOS-0.2.19-release.apk",
+      "sha256": "3ad0334cecb9f0d11c6a1300da5cd4d17634da82d9ba7638a12467c6b62d66ac"
+    }
+  }
+}
