@@ -9,7 +9,7 @@ Pages at **https://apexbos.github.io** (branch `main`, root).
   Android `url` must be the signed `ApexBOS-<version>-release.apk`.
 - APKs are attached to the GitHub Release `v<version>` of this repository.
 
-Latest: **0.2.19** (versionCode 219) — `ApexBOS-0.2.19-release.apk`, SHA-256 `3ad0334cecb9f0d11c6a1300da5cd4d17634da82d9ba7638a12467c6b62d66ac`.
+Latest: **0.2.23** (versionCode 223) — `ApexBOS-0.2.23-release.apk`, SHA-256 `b45b0057ad440f41136661ddbfe026b28a699439b88b7d6fbf2a31d6bc021dfc`.
 Signing certificate SHA-256: `A8:4E:29:13:C5:FD:52:1D:7E:A0:34:25:03:EB:AD:98:38:DE:88:70:2C:EF:7B:DB:40:B5:F2:1E:47:D4:60:5D`.
 
 Before updating: make a Backup, and update every device of a business together.

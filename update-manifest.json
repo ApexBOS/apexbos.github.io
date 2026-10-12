@@ -1,14 +1,14 @@
 {
-  "version": "0.2.19",
-  "publishedAt": "2026-10-12T06:45:01Z",
+  "version": "0.2.23",
+  "publishedAt": "2026-10-12T15:23:17Z",
   "notes": {
-    "en": "- Settings → About → App updates: the app can now check for updates. Tap Check for updates; when a newer ApexBOS is out you see what changed (Myanmar or English) and Download gets the signed APK from the ApexBOS download page, https://apexbos.github.io (the app never checks or installs by itself). Update every device of a business together, and make a Backup first.\n- Phones still on an old test (debug) build cannot update over it: one time only — Backup, uninstall, install the new APK, Restore, then pair the device again.",
-    "my": "- ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ်: အက်ပ်က အပ်ဒိတ် စစ်နိုင်ပါပြီ။ အဆင့်မြှင့်မှု စစ်မည် ကို နှိပ်ပါ၊ ApexBOS ဗားရှင်းအသစ် ထွက်လျှင် ဘာပြောင်းသလဲ (မြန်မာ သို့မဟုတ် အင်္ဂလိပ်) ပြပြီး ဒေါင်းလုဒ် က ApexBOS ဒေါင်းလုဒ် စာမျက်နှာ https://apexbos.github.io မှ လက်မှတ်ထိုးထားသော APK ကို ယူပေးပါသည် (အက်ပ်က ကိုယ်တိုင် မစစ်ပါ၊ ကိုယ်တိုင် မထည့်သွင်းပါ)။ လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို အတူတူ အပ်ဒိတ်လုပ်ပြီး Backup အရင်လုပ်ပါ။\n- စမ်းသပ် (debug) ဗားရှင်းဟောင်း သုံးနေသော ဖုန်းများသည် အပ်ဒိတ် တိုက်ရိုက် မရပါ — တစ်ကြိမ်သာ: Backup လုပ်၊ အက်ပ်ကို ဖြုတ်၊ APK အသစ် ထည့်၊ Restore လုပ်ပြီး စက်ကို ပြန်ချိတ်ပါ။"
+    "en": "- The opening cash of a shift now comes from the safe: when a shift opens, its opening cash is taken from *Cash in safe / petty cash*, and when it closes the counted cash goes back there (a shortage or overage is still recorded). Only shifts opened after this update work this way — a shift that was already open when you updated closes exactly as before, so nothing is counted twice.\n- Owners see Cash on hand on the Dashboard: all the cash the business has now, what is in the safe and what is in each drawer, in plain words. The first time it asks **How much cash did the business start with? (saved as money the owner put in). Not now** hides the question; you can add or change the starting cash later — the earlier record stays and only the difference is added.\n- Books health: the cash drawer drill-down now reads Cash the till should hold (opening cash included) when every shift on that register took its opening cash from the safe (it said \"no float\", although the amount includes the opening cash). Registers with shifts opened before this update keep the old wording.\n- All devices of a business must update to this version together.",
+    "my": "- အလှည့်၏ အစငွေကို မီးခံသေတ္တာမှ ယူပါပြီ: အလှည့်ဖွင့်လျှင် အစငွေကို *မီးခံသေတ္တာနှင့် လက်ကိုင်ငွေ* မှ ယူပြီး အလှည့်ပိတ်လျှင် ရေတွက်ရသော ငွေကို ထိုနေရာသို့ ပြန်ထည့်ပါသည် (ငွေပို / ငွေလို ကိုလည်း ဆက်မှတ်ပါသည်)။ ဤအပ်ဒိတ်ပြီးနောက် ဖွင့်သော အလှည့်များသာ ဤနည်းဖြင့် အလုပ်လုပ်ပါသည် — အပ်ဒိတ်လုပ်ချိန်တွင် ဖွင့်ထားဆဲ အလှည့်ကို ယခင်အတိုင်း ပိတ်ပါသည်၊ ထို့ကြောင့် နှစ်ခါ မရေတွက်ပါ။\n- ပိုင်ရှင်များ ပင်မစာမျက်နှာ (Dashboard) တွင် လက်ထဲရှိ ငွေသား ကို မြင်ရပါပြီ: လုပ်ငန်းတွင် ယခုရှိသော ငွေသား စုစုပေါင်း၊ မီးခံသေတ္တာထဲရှိ ငွေနှင့် ငွေအံဆွဲတစ်ခုစီထဲရှိ ငွေကို ရိုးရိုး စကားဖြင့် ပြပါသည်။ ပထမဆုံးအကြိမ် လုပ်ငန်း စတင်ချိန်တွင် ငွေသား ဘယ်လောက် ရှိခဲ့သလဲ ဟု မေးပါသည် (ပိုင်ရှင် ထည့်ဝင်ငွေ အဖြစ် သိမ်းပါသည်)။ နောက်မှ ကို နှိပ်လျှင် မေးခွန်းကို ဖျောက်ထားပြီး နောက်ပိုင်း စတင်ငွေကို ထည့် / ပြင် နိုင်ပါသည် — ယခင်မှတ်တမ်း မပြောင်းဘဲ ကွာခြားချက်ကိုသာ ထပ်ထည့်ပါသည်။\n- စာရင်းစာအုပ် ကျန်းမာရေး: ငွေအံဆွဲ အသေးစိတ်တွင် ထိုကောင်တာ၏ အလှည့်အားလုံးက အစငွေကို မီးခံသေတ္တာမှ ယူထားလျှင် ကောင်တာတွင် ရှိသင့်သောငွေ (အစငွေ ပါ) ဟု ပြပါပြီ (ယခင်က ငွေပမာဏတွင် အစငွေ ပါသော်လည်း \"အစငွေ မပါ\" ဟု ပြခဲ့သည်)။ ဤအပ်ဒိတ်မတိုင်မီ ဖွင့်ခဲ့သော အလှည့်ရှိသည့် ကောင်တာများတွင် ယခင်စာသားအတိုင်း ပြပါသည်။\n- လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို ဤဗားရှင်းသို့ အတူတူ အပ်ဒိတ်လုပ်ရပါမည်။"
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.19/ApexBOS-0.2.19-release.apk",
-      "sha256": "3ad0334cecb9f0d11c6a1300da5cd4d17634da82d9ba7638a12467c6b62d66ac"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.23/ApexBOS-0.2.23-release.apk",
+      "sha256": "b45b0057ad440f41136661ddbfe026b28a699439b88b7d6fbf2a31d6bc021dfc"
     }
   }
 }
