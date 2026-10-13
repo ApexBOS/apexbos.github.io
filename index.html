@@ -31,6 +31,11 @@ a{color:var(--accent);word-break:break-word}
 ol,ul{margin:.25rem 0 .5rem;padding-left:1.4rem}
 li{margin:.3rem 0}
 .hash{display:block;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);padding:.5rem .6rem;border-radius:8px;word-break:break-all;user-select:all}
+h3{font-size:1rem;line-height:1.4;margin:.75rem 0 .25rem}
+.badge{display:inline-block;margin:.25rem 0 .5rem;padding:.2rem .7rem;border-radius:999px;background:var(--warn-bg);border:1px solid var(--warn-line);font-size:.9rem;font-weight:600}
+.plan{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;margin:.6rem 0}
+.plan h3{margin:.1rem 0}
+.price{font-weight:700;margin:.1rem 0 .3rem}
 .warn{background:var(--warn-bg);border-color:var(--warn-line)}
 footer{color:var(--muted);font-size:.85rem;text-align:center;padding-top:.5rem}
 html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!important}
@@ -52,6 +57,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <a class="dl" id="download" href="https://apexbos.github.io/apk/ApexBOS-0.2.23-release.apk" download><span aria-hidden="true">⬇</span> <span data-l="my">ApexBOS 0.2.23 ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS 0.2.23</span></a>
   <p class="muted"><span data-l="my">ဖိုင်: </span><span data-l="en">File: </span>ApexBOS-0.2.23-release.apk · Android 6.0+</p>
   <p><span data-l="my">ထည့်သွင်းပြီးသား ဖုန်းများတွင် အက်ပ်ထဲမှ ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ် → <b>အဆင့်မြှင့်မှု စစ်မည်</b> ကိုလည်း နှိပ်နိုင်ပါသည်။</span><span data-l="en">On phones that already have ApexBOS you can also open Settings → About → App updates → <b>Check for updates</b>.</span></p>
+  <p><a href="#plans"><span data-l="my">အစီအစဉ်များနှင့် ဈေးနှုန်း →</span><span data-l="en">Plans &amp; pricing →</span></a></p>
 </section>
 
 <section class="warn">
@@ -85,6 +91,96 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <p class="muted"><span data-l="my">နောက်ပိုင်း အပ်ဒိတ်များကို ဖြုတ်စရာမလိုဘဲ တိုက်ရိုက် ထည့်နိုင်ပါသည်။</span><span data-l="en">After this, updates install directly — no uninstall.</span></p>
 </section>
 
+
+<section id="plans">
+  <h2><span data-l="my">အစီအစဉ်များနှင့် ဈေးနှုန်း</span><span data-l="en">Plans &amp; pricing</span></h2>
+  <p class="badge"><span data-l="my">စမ်းသပ်ကာလ ဈေးနှုန်း — ပြောင်းလဲနိုင်ပါသည်</span><span data-l="en">Pilot prices — may change</span></p>
+
+  <h3><span data-l="my">အမြဲ အခမဲ့</span><span data-l="en">Always free</span></h3>
+  <ul>
+    <li><span data-l="my">ပလက်ဖောင်းတိုင်းရှိ အက်ပ်၊ module အားလုံး၊ ဖုန်းထဲရှိ ဒေတာအားလုံး</span><span data-l="en">The app on every platform, every module, all your local data</span></li>
+    <li><span data-l="my">အင်တာနက်မရှိဘဲ (offline) သုံးနိုင်ခြင်း</span><span data-l="en">Offline use</span></li>
+    <li><span data-l="my">စက်အချင်းချင်း တိုက်ရိုက် စင့်ခ် — Wi‑Fi/LAN၊ Bluetooth၊ bundle ဖိုင်၊ QR ဖြင့် ချိတ်ဆက်ခြင်း</span><span data-l="en">Peer-to-peer and LAN sync — Wi‑Fi/LAN, Bluetooth, bundle files, QR pairing</span></li>
+    <li><span data-l="my">ကိုယ်တိုင် သိမ်းသော စာဝှက်ထားသည့် Backup ဖိုင်များ</span><span data-l="en">Encrypted backup files you save yourself</span></li>
+    <li><span data-l="my">Telegram inbox (polling)</span><span data-l="en">Telegram inbox polling</span></li>
+  </ul>
+  <p class="muted"><span data-l="my">အခမဲ့ အက်ပ်တွင် "ကြော်ငြာ" ဟု ရေးထားသော ပေးသွင်းသူ ကမ်းလှမ်းချက် အသေးလေးများ ပြပါသည်။ ငွေရှင်းချိန်နှင့် ငွေပေးချေချိန်တွင် ဘယ်တော့မှ မပြပါ။</span><span data-l="en">The free app shows small supplier offers labelled as ads — never at checkout or payment.</span></p>
+
+  <h3><span data-l="my">ပိုက်ဆံပေးရသည့် တစ်ခုတည်း — Sync server (ရွေးချယ်နိုင်)</span><span data-l="en">The only paid thing — the sync server (optional)</span></h3>
+  <p><span data-l="my">အမြဲဖွင့်ထားသော၊ အစမှအဆုံး စာဝှက်ထားသည့် စာတိုက်ပုံး ဖြစ်ပါသည်။ နေရာမတူသော သို့မဟုတ် အချိန်မတူ ဖွင့်သော စက်များလည်း ဒေတာ မီလာပါမည်။ စာဝှက်ထားသော Backup ကို အပြင်ဘက်တွင် သိမ်းပေးပြီး customer-inbox webhook များကိုလည်း လက်ခံပေးပါသည်။</span><span data-l="en">An always-on, end-to-end encrypted mailbox. Devices in different places, or switched on at different times, still catch up. It also keeps an off-site encrypted backup and receives customer-inbox webhooks.</span></p>
+  <ul>
+    <li><span data-l="my">Server သည် သင့်ဒေတာကို ဖတ်၍ မရ၊ စက်အသစ် ထည့်၍ မရ၊ မည်သူ့ကိုမျှ ဝင်ခွင့်ပေး၍ မရပါ။ စာဝှက်ထားသော ဒေတာ၊ အရွယ်အစားနှင့် အချိန်ကိုသာ မြင်ပါသည်။</span><span data-l="en">The server can't read your data, add devices or sign anyone in. It only sees encrypted data, plus sizes and timestamps.</span></li>
+    <li><span data-l="my">အစီအစဉ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi/LAN စင့်ခ် ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">If a plan lapses, the app and local Wi‑Fi/LAN sync keep working.</span></li>
+    <li><span data-l="my">ကန့်သတ်ချက်များသည် server အတွက်သာ ဖြစ်ပါသည်။ LAN စင့်ခ်မှာ အခမဲ့ ဖြစ်ပြီး အကန့်အသတ် မရှိပါ။</span><span data-l="en">Limits apply only to the hosted server. LAN sync is free and unlimited.</span></li>
+  </ul>
+
+  <div class="plan">
+    <h3>Free</h3>
+    <p class="price">0 <span data-l="my">ကျပ်</span><span data-l="en">Ks</span></p>
+    <p><span data-l="my">Wi‑Fi/LAN စင့်ခ်သာ (server မပါ)</span><span data-l="en">Wi‑Fi/LAN sync only (no server)</span></p>
+  </div>
+  <div class="plan">
+    <h3>Trial</h3>
+    <p class="price"><span data-l="my">ရက် ၃၀ အခမဲ့</span><span data-l="en">Free for 30 days</span></p>
+    <p class="muted"><span data-l="my">လုပ်ငန်းတစ်ခုလျှင် တစ်ကြိမ်သာ</span><span data-l="en">Once per business</span></p>
+    <ul>
+      <li><span data-l="my">စက် 2 လုံး · ဆိုင် 1 ဆိုင် · 1 GB</span><span data-l="en">2 devices · 1 store · 1 GB</span></li>
+      <li><span data-l="my">မှတ်တမ်း ရက် 30 · Backup ဗားရှင်း 3 ခု</span><span data-l="en">30-day history · 3 backup versions</span></li>
+      <li><span data-l="my">Inbox webhook မပါ</span><span data-l="en">No inbox webhooks</span></li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Shop</h3>
+    <p class="price"><span data-l="my">တစ်လ 15,000 ကျပ် · တစ်နှစ် 150,000 ကျပ်</span><span data-l="en">15,000 Ks a month · 150,000 Ks a year</span></p>
+    <ul>
+      <li><span data-l="my">စက် 3 လုံး · ဆိုင် 1 ဆိုင် · 2 GB</span><span data-l="en">3 devices · 1 store · 2 GB</span></li>
+      <li><span data-l="my">မှတ်တမ်း ရက် 180 · Backup ဗားရှင်း 5 ခု</span><span data-l="en">180-day history · 5 backup versions</span></li>
+      <li><span data-l="my">Inbox webhook မပါ</span><span data-l="en">No inbox webhooks</span></li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Business</h3>
+    <p class="price"><span data-l="my">တစ်လ 39,000 ကျပ် · တစ်နှစ် 390,000 ကျပ်</span><span data-l="en">39,000 Ks a month · 390,000 Ks a year</span></p>
+    <ul>
+      <li><span data-l="my">စက် 8 လုံး · ဆိုင် 3 ဆိုင် · 10 GB</span><span data-l="en">8 devices · 3 stores · 10 GB</span></li>
+      <li><span data-l="my">မှတ်တမ်း ရက် 365 · Backup ဗားရှင်း 10 ခု</span><span data-l="en">365-day history · 10 backup versions</span></li>
+      <li><span data-l="my">Inbox webhook ပါ</span><span data-l="en">Inbox webhooks included</span></li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Multi-store</h3>
+    <p class="price"><span data-l="my">တစ်လ 99,000 ကျပ် · တစ်နှစ် 990,000 ကျပ်</span><span data-l="en">99,000 Ks a month · 990,000 Ks a year</span></p>
+    <ul>
+      <li><span data-l="my">စက် 25 လုံး · ဆိုင် 10 ဆိုင် · 50 GB</span><span data-l="en">25 devices · 10 stores · 50 GB</span></li>
+      <li><span data-l="my">မှတ်တမ်း ရက် 730 · Backup ဗားရှင်း 20 ခု</span><span data-l="en">730-day history · 20 backup versions</span></li>
+      <li><span data-l="my">Inbox webhook ပါ</span><span data-l="en">Inbox webhooks included</span></li>
+    </ul>
+  </div>
+  <p class="muted"><span data-l="my">ပိုက်ဆံပေး အစီအစဉ်များတွင် ကြော်ငြာ နည်းပါသည် — ကြော်ငြာနေရာ အများစုကို ပိတ်ထားပြီး ပိုင်ရှင်က အနည်းငယ်ကိုသာ ဖွင့်ရန် ရွေးနိုင်ပါသည်။</span><span data-l="en">Paid plans show fewer ads: most ad spots are off, and owners can opt in to a few.</span></p>
+</section>
+
+<section id="pay">
+  <h2><span data-l="my">ငွေပေးချေနည်း</span><span data-l="en">How to pay</span></h2>
+  <p class="badge"><span data-l="my">စမ်းသပ်ကာလ — လက်ဖြင့် အတည်ပြုပါသည်</span><span data-l="en">Pilot — approved by hand</span></p>
+  <p><span data-l="my">KBZPay၊ WavePay သို့မဟုတ် ဘဏ်လွှဲဖြင့် ပေးနိုင်ပါသည်။</span><span data-l="en">Pay by KBZPay, WavePay or bank transfer.</span></p>
+  <ol>
+    <li><span data-l="my">အက်ပ်ထဲတွင် ဆက်တင် → <b>Sync server plan</b> → <b>Connect sync server</b> ကို ဖွင့်ပါ။</span><span data-l="en">In the app, open Settings → <b>Sync server plan</b> → <b>Connect sync server</b>.</span></li>
+    <li><span data-l="my">အစီအစဉ်ကို ရွေးပြီး ငွေပေးချေပါ။</span><span data-l="en">Choose a plan and pay.</span></li>
+    <li><span data-l="my">ငွေလွှဲ နံပါတ် (Transaction ID) ကို ထည့်ပါ။ ပြေစာ ဓာတ်ပုံလည်း ထည့်နိုင်ပါသည် (မဖြစ်မနေ မဟုတ်)။</span><span data-l="en">Enter the transaction ID. You can add a receipt photo (optional).</span></li>
+    <li><span data-l="my"><b>Send request</b> ကို နှိပ်ပါ။</span><span data-l="en">Tap <b>Send request</b>.</span></li>
+    <li><span data-l="my">ကျွန်ုပ်တို့ အတည်ပြုပြီးသည်နှင့် လက်မှတ်ထိုးထားသော key ရောက်လာပြီး အလိုအလျောက် ချိတ်ဆက်ပါမည်။</span><span data-l="en">Once we approve it, your signed key arrives and connects automatically.</span></li>
+  </ol>
+  <p class="muted"><span data-l="my">Key ကို စာတို သို့မဟုတ် QR ဖြင့်လည်း ပို့နိုင်ပြီး <b>Advanced</b> တွင် ကူးထည့်နိုင်ပါသည်။ သက်တမ်းတိုးခြင်းလည်း ဤနည်းအတိုင်း ဖြစ်ပါသည်။</span><span data-l="en">A key can also be sent by text or QR and pasted under <b>Advanced</b>. Renewal works the same way.</span></p>
+</section>
+
+<section>
+  <h2><span data-l="my">ဖိုင် စစ်ဆေးရန် (မဖြစ်မနေ မဟုတ်)</span><span data-l="en">Check the file (optional)</span></h2>
+  <p class="muted">SHA-256 (APK)</p>
+  <code class="hash">b45b0057ad440f41136661ddbfe026b28a699439b88b7d6fbf2a31d6bc021dfc</code>
+  <p class="muted"><span data-l="my">လက်မှတ် (signing certificate) SHA-256</span><span data-l="en">Signing certificate SHA-256</span></p>
+  <code class="hash">A8:4E:29:13:C5:FD:52:1D:7E:A0:34:25:03:EB:AD:98:38:DE:88:70:2C:EF:7B:DB:40:B5:F2:1E:47:D4:60:5D</code>
+  <p class="muted"><span data-l="my">Android သည် အက်ပ်ဟောင်းနှင့် လက်မှတ် တူမှသာ အပ်ဒိတ်ကို လက်ခံပါသည်။</span><span data-l="en">Android only accepts an update signed with the same certificate as the installed app.</span></p>
+</section>
 
 <footer>
   <p><a href="https://github.com/ApexBOS/apexbos.github.io/releases"><span data-l="my">ဗားရှင်းအားလုံး</span><span data-l="en">All versions</span></a> · <a href="update-manifest.json">update-manifest.json</a></p>
