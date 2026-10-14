@@ -6,7 +6,8 @@
 <meta name="color-scheme" content="light dark">
 <title>ApexBOS — လုပ်ငန်းလည်ပတ်မှုစနစ် · Business Operating System</title>
 <meta name="description" content="ApexBOS Android app — download the latest signed APK. ApexBOS Android အက်ပ် နောက်ဆုံးဗားရှင်း ဒေါင်းလုဒ်။">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 :root{--bg:#f7f8fa;--card:#fff;--text:#111827;--muted:#4b5563;--line:#d1d5db;--accent:#1d4ed8;--accent-text:#fff;--warn-bg:#fff7ed;--warn-line:#c2410c;--code:#f1f5f9}
 @media (prefers-color-scheme:dark){:root{--bg:#0b1120;--card:#111a2e;--text:#f3f4f6;--muted:#c3cad6;--line:#334155;--accent:#60a5fa;--accent-text:#0b1120;--warn-bg:#2a1a0e;--warn-line:#fb923c;--code:#1e293b}}
@@ -16,7 +17,8 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-ap
 main{max-width:40rem;margin:0 auto;padding:1rem 1rem 3rem}
 header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.5rem 0 1rem}
 .brand{display:flex;align-items:center;gap:.75rem;min-width:0}
-.logo{flex:none;width:44px;height:44px;border-radius:10px;background:var(--accent);color:var(--accent-text);display:grid;place-items:center;font-weight:700;font-size:1.3rem}
+.logo{flex:none;width:44px;height:44px;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.logo svg{display:block}
 .brand b{display:block;font-size:1.15rem;line-height:1.3}
 .brand span{display:block;color:var(--muted);font-size:.9rem;line-height:1.4}
 button.lang{min-height:44px;min-width:44px;padding:0 1rem;border-radius:22px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:.95rem;cursor:pointer}
@@ -74,7 +76,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
 <main>
 <header>
   <div class="brand">
-    <div class="logo" aria-hidden="true">A</div>
+    <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" aria-hidden="true" viewBox="0 0 512 512"><style>.b0{stop-color:#F8FAFC}.b1{stop-color:#E2E8F0}.a0{stop-color:#2563EB}.a1{stop-color:#7C3AED}@media (prefers-color-scheme:dark){.b0{stop-color:#1E293B}.b1{stop-color:#0F172A}.a0{stop-color:#60A5FA}.a1{stop-color:#A78BFA}}</style><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="b0"/><stop offset="1" class="b1"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="a0"/><stop offset="1" class="a1"/></linearGradient></defs><rect width="512" height="512" rx="114" fill="url(#bg)"/><path d="M256 104 C268 104 278 111 283 122 L404 382 C412 399 400 416 381 416 H340 C330 416 321 410 317 401 L256 262 L195 401 C191 410 182 416 172 416 H131 C112 416 100 399 108 382 L229 122 C234 111 244 104 256 104 Z" fill="url(#a)"/></svg></div>
     <div><b>ApexBOS</b><span lang="my">လုပ်ငန်းလည်ပတ်မှုစနစ်</span><span lang="en">Business Operating System</span></div>
   </div>
   <button class="lang" id="lang" type="button" aria-label="English / မြန်မာ"><span data-l="my">English</span><span data-l="en">မြန်မာ</span></button>
