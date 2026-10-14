@@ -30,6 +30,7 @@ p{margin:.25rem 0 .5rem}
 a.dl{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;margin:.75rem 0 .5rem;padding:.5rem 1rem;border-radius:12px;background:var(--accent);color:var(--accent-text);font-weight:700;font-size:1.05rem;text-decoration:none}
 a.dl.web{background:transparent;color:var(--accent);border:2px solid var(--accent)}
 .steps-web{margin:.25rem 0 0;padding-left:1.25rem}.steps-web li{margin:.35rem 0}
+details.lim{margin:.75rem 0;padding:.5rem .75rem;border:1px solid var(--warn-line);border-radius:12px}details.lim summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}details.lim h3{font-size:1rem;margin:.75rem 0 .25rem}details.lim ul{margin:0;padding-left:1.25rem}details.lim li{margin:.3rem 0}
 a.dl:focus-visible,button.lang:focus-visible,a:focus-visible{outline:3px solid var(--warn-line);outline-offset:2px}
 a{color:var(--accent);word-break:break-word}
 ol,ul{margin:.25rem 0 .5rem;padding-left:1.4rem}
@@ -117,7 +118,38 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
     <li><span data-l="my"><b>Android (Chrome)</b>: ⋮ မီနူး → <b>Install app</b></span><span data-l="en"><b>Android (Chrome)</b>: ⋮ menu → <b>Install app</b></span></li>
     <li><span data-l="my"><b>iPhone (Safari)</b>: Share → <b>Add to Home Screen</b></span><span data-l="en"><b>iPhone (Safari)</b>: Share → <b>Add to Home Screen</b></span></li>
     <li><span data-l="my"><b>ကွန်ပျူတာ (Chrome / Edge)</b>: လိပ်စာဘားရှိ install အိုင်ကွန်ကို နှိပ်ပါ</span><span data-l="en"><b>Computer (Chrome / Edge)</b>: click the install icon in the address bar</span></li>
+    <li><span data-l="my"><b>Mac (Safari)</b>: File → <b>Add to Dock</b></span><span data-l="en"><b>Mac (Safari)</b>: File → <b>Add to Dock</b></span></li>
   </ul>
+  <details class="lim">
+    <summary><span data-l="my">⚠ ဝဘ်အက်ပ်၏ ကန့်သတ်ချက်များ</span><span data-l="en">⚠ Web app limits</span></summary>
+    <h3><span data-l="my">ထည့်သွင်းထားသော်လည်း ပလက်ဖောင်းတိုင်းတွင်</span><span data-l="en">On every platform, even installed</span></h3>
+    <ul>
+      <li><span data-l="my">Wi‑Fi hub မဖြစ်နိုင်ပါ — ရှိပြီးသား hub သို့ တွဲဖက်ကုဒ်ဖြင့် ချိတ်ဆက်ရုံသာ။</span><span data-l="en">Can't be the Wi‑Fi hub — it can only join one with the pairing codes.</span></li>
+      <li><span data-l="my">ဖွင့်ထားချိန်တွင်သာ Sync လုပ်ပါသည်။ နောက်ခံတွင် ဖုန်းက ရပ်ထားပါသည်။</span><span data-l="en">Syncs only while open; phones pause it in the background.</span></li>
+      <li><span data-l="my">စနစ်အသိပေးချက် မရှိပါ — အက်ပ်ထဲ စာရင်းသာ။</span><span data-l="en">No system notifications — in‑app list only.</span></li>
+      <li><span data-l="my">ဒေတာများ ဘရောက်ဇာထဲတွင် ရှိသည်။ site data ရှင်းလျှင် ပျက်ပါမည်။ private mode တွင် ဘာမျှ မသိမ်းပါ။ စက်သော့များ ဖုန်း၏ လုံခြုံသော hardware ထဲ မဟုတ်ပါ။</span><span data-l="en">Data lives in the browser: clearing site data deletes it, private mode saves nothing, and device keys aren't in the phone's secure hardware.</span></li>
+      <li><span data-l="my">တစ်ကြိမ်လျှင် tab တစ်ခုတွင်သာ ဖွင့်နိုင်ပါသည်။</span><span data-l="en">Runs in one tab at a time.</span></li>
+    </ul>
+    <h3><span data-l="my">မထည့်သွင်းဘဲ tab ထဲတွင် သုံးလျှင်</span><span data-l="en">Not installed (just a tab)</span></h3>
+    <ul>
+      <li><span data-l="my">သိုလှောင်မှု နည်းလာလျှင် ဘရောက်ဇာက ဒေတာ ဖျက်နိုင်ခြေ ပိုများသည်။ ထည့်သွင်းလျှင် ဒေတာ ထိန်းထားခွင့် ရလေ့ရှိသည်။</span><span data-l="en">The browser is more likely to delete data when storage runs low; installing usually earns the keep‑my‑data permission.</span></li>
+      <li><span data-l="my">Safari သည် ၇ ရက် မသုံးသော site ၏ ဒေတာကို ဖျက်နိုင်သည် (Home Screen အက်ပ်များ ကင်းလွတ်)။</span><span data-l="en">Safari can delete data from sites unused for 7 days (home‑screen apps are exempt).</span></li>
+    </ul>
+    <h3><span data-l="my">Android (Chrome)</span><span data-l="en">Android (Chrome)</span></h3>
+    <ul>
+      <li><span data-l="my">ဝဘ်အတွက် အကောင်းဆုံး — ကင်မရာဖြင့် barcode စကန်နှင့် USB/Bluetooth ပရင်တာ အလုပ်လုပ်သည်။ APK ထက်တော့ အားနည်းသည်။</span><span data-l="en">Best web option: camera barcode scan and USB/Bluetooth printers work. Still weaker than the APK.</span></li>
+    </ul>
+    <h3><span data-l="my">iPhone / iPad</span><span data-l="en">iPhone / iPad</span></h3>
+    <ul>
+      <li><span data-l="my">ဘရောက်ဇာအားလုံး Safari engine ဖြင့် လည်ပတ်သည်။ barcode ကင်မရာ စကန်နှင့် USB/serial/Bluetooth ပရင်တာ မရပါ။</span><span data-l="en">Every browser uses Safari's engine: no barcode camera scan, no USB/serial/Bluetooth printers.</span></li>
+      <li><span data-l="my">Home Screen အက်ပ်၏ ဒေတာသည် Safari tab နှင့် သီးခြားဖြစ်သည် — ဒေတာ မထည့်မီ ထည့်သွင်းပါ။</span><span data-l="en">The home‑screen app keeps its own data, separate from Safari — install it before entering data.</span></li>
+    </ul>
+    <h3><span data-l="my">ကွန်ပျူတာ</span><span data-l="en">Computers</span></h3>
+    <ul>
+      <li><span data-l="my">Chrome / Edge: ထည့်သွင်းနိုင်ပြီး ပရင်တာ အလုပ်လုပ်သည်။ Firefox: Windows တွင်သာ ထည့်သွင်းနိုင်၊ ပရင်တာ မရ။ Mac Safari: File → Add to Dock၊ USB/Bluetooth ပရင်တာ မရ။</span><span data-l="en">Chrome / Edge: install and printers work. Firefox: install on Windows only, no printers. Mac Safari: File → Add to Dock, no USB/Bluetooth printers.</span></li>
+    </ul>
+    <p class="muted"><span data-l="my">စမ်းသုံးရန်၊ back‑office မျက်နှာပြင်အတွက်၊ သို့မဟုတ် Android အက်ပ် ရှိပြီးသား ဆိုင်တွင် ဒုတိယစက် ချိတ်ရန် သင့်တော်သည်။ ဆိုင်၏ အမြဲဖွင့် hub အတွက် Android အက်ပ်ကို သုံးပါ။</span><span data-l="en">Good for trying ApexBOS, a back‑office screen, or a second device joining a shop that already runs the Android app. Use the Android app for the shop's always‑on hub.</span></p>
+  </details>
   <p><span data-l="my">ထည့်သွင်းပြီးသား ဖုန်းများတွင် အက်ပ်ထဲမှ ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ် → <b>အဆင့်မြှင့်မှု စစ်မည်</b> ကိုလည်း နှိပ်နိုင်ပါသည်။</span><span data-l="en">On phones that already have ApexBOS you can also open Settings → About → App updates → <b>Check for updates</b>.</span></p>
   <p><a href="#how"><span data-l="my">အလုပ်လုပ်ပုံနှင့် ဈေးနှုန်း →</span><span data-l="en">How it works &amp; pricing →</span></a></p>
 </section>
