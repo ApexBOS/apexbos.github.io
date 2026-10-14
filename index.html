@@ -36,6 +36,35 @@ h3{font-size:1rem;line-height:1.4;margin:.75rem 0 .25rem}
 .plan{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;margin:.6rem 0}
 .plan h3{margin:.1rem 0}
 .price{font-weight:700;margin:.1rem 0 .3rem}
+.dg{border:1px solid var(--line);border-radius:12px;padding:.75rem;margin:.5rem 0 .6rem;background:var(--code)}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center}
+.dev,.cloud{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.4rem .6rem;font-size:.88rem;line-height:1.4;text-align:center;min-width:4.6rem;max-width:9.5rem}
+.dev i,.cloud i{display:block;font-style:normal;font-size:1.5rem;line-height:1.3}
+.dev small,.cloud small{display:block;color:var(--muted);font-size:.8rem}
+.hub{margin:.35rem auto;max-width:18rem;text-align:center;font-weight:600;border:2px solid var(--accent);border-radius:10px;padding:.35rem .6rem;background:var(--card)}
+.arrow{text-align:center;color:var(--accent);font-size:1.3rem;line-height:1.2;font-weight:700}
+.arrow.side{min-width:auto}
+.chips{text-align:center;margin-top:.4rem}
+.chips span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.05rem .6rem;margin:.15rem;font-size:.82rem;background:var(--card)}
+.cap{text-align:center;font-size:.9rem;margin:.4rem 0}
+.stack div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:.4rem .6rem;margin:.3rem 0;font-size:.92rem}
+.stack div+div{margin-left:.6rem}
+.stack div+div+div{margin-left:1.2rem}
+.stack div+div+div+div{margin-left:1.8rem}
+.stack div+div+div+div+div{margin-left:0;border-left-color:var(--warn-line)}
+button.switch{display:flex;align-items:center;gap:.6rem;margin:0 auto .7rem;min-height:48px;padding:.3rem 1rem .3rem .4rem;border-radius:26px;border:2px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-weight:600;cursor:pointer}
+button.switch .knob{width:52px;height:30px;border-radius:15px;background:var(--line);position:relative;flex:none;transition:background .2s}
+button.switch .knob::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .2s}
+html.relay-on button.switch{border-color:var(--accent)}
+html.relay-on button.switch .knob{background:var(--accent)}
+html.relay-on button.switch .knob::after{left:25px}
+.relay .cloud{opacity:.35;border-style:dashed;transition:opacity .2s}
+html.relay-on .relay .cloud{opacity:1;border:2px solid var(--accent)}
+html:not(.relay-on) .st-on,html.relay-on .st-off{display:none!important}
+html.js:not(.relay-on) .paid{display:none!important}
+html:not(.js) .nojs-hide{display:none}
+button.switch:focus-visible{outline:3px solid var(--warn-line);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){button.switch .knob,button.switch .knob::after,.relay .cloud{transition:none}}
 .warn{background:var(--warn-bg);border-color:var(--warn-line)}
 footer{color:var(--muted);font-size:.85rem;text-align:center;padding-top:.5rem}
 html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!important}
@@ -57,7 +86,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <a class="dl" id="download" href="https://apexbos.github.io/apk/ApexBOS-0.2.23-release.apk" download><span aria-hidden="true">⬇</span> <span data-l="my">ApexBOS 0.2.23 ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS 0.2.23</span></a>
   <p class="muted"><span data-l="my">ဖိုင်: </span><span data-l="en">File: </span>ApexBOS-0.2.23-release.apk · Android 6.0+</p>
   <p><span data-l="my">ထည့်သွင်းပြီးသား ဖုန်းများတွင် အက်ပ်ထဲမှ ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ် → <b>အဆင့်မြှင့်မှု စစ်မည်</b> ကိုလည်း နှိပ်နိုင်ပါသည်။</span><span data-l="en">On phones that already have ApexBOS you can also open Settings → About → App updates → <b>Check for updates</b>.</span></p>
-  <p><a href="#plans"><span data-l="my">အစီအစဉ်များနှင့် ဈေးနှုန်း →</span><span data-l="en">Plans &amp; pricing →</span></a></p>
+  <p><a href="#how"><span data-l="my">အလုပ်လုပ်ပုံနှင့် ဈေးနှုန်း →</span><span data-l="en">How it works &amp; pricing →</span></a></p>
 </section>
 
 <section class="warn">
@@ -92,27 +121,81 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
 </section>
 
 
-<section id="plans">
+<section id="how">
+  <h2><span data-l="my">ApexBOS အလုပ်လုပ်ပုံ</span><span data-l="en">How ApexBOS works</span></h2>
+  <p><span data-l="my">အက်ပ်နှင့် ဒေတာ အားလုံး သင့်စက်ထဲမှာ ရှိပြီး <b>အခမဲ့</b> ဖြစ်ပါသည်။ ပိုက်ဆံပေးရသည်မှာ ရွေးချယ်နိုင်သော relay တစ်ခုတည်းသာ။</span><span data-l="en">The app and all your data live on your devices, <b>free</b>. The only paid part is an optional relay.</span></p>
+
+  <h3>1 · <span data-l="my">ဆိုင်ထဲ စင့်ခ် — အခမဲ့</span><span data-l="en">Local sync — free</span></h3>
+  <div class="dg">
+    <div class="row">
+      <div class="dev"><i>📱</i>Android</div><div class="dev"><i>📱</i>iPhone</div><div class="dev"><i>💻</i>Windows</div><div class="dev"><i>🖥️</i>Mac · Linux</div>
+    </div>
+    <div class="arrow">⇅ ⇅ ⇅</div>
+    <div class="hub"><span data-l="my">ဆိုင် Wi‑Fi / LAN</span><span data-l="en">Shop Wi‑Fi / LAN</span></div>
+    <div class="chips"><span>Wi‑Fi/LAN</span><span>Bluetooth</span><span data-l="my">ဖိုင် / USB</span><span data-l="en">File / USB</span><span data-l="my">QR ချိတ်</span><span data-l="en">QR pairing</span></div>
+  </div>
+  <p class="muted"><span data-l="my">စက်အရေအတွက်၊ အမျိုးအစား အကန့်အသတ်မရှိ ထည့်နိုင်ပါသည်။ ဆာဗာ မလို၊ အင်တာနက် မလိုပါ။</span><span data-l="en">Add any number and any type of device. No server, no internet needed.</span></p>
+
+  <h3>2 · <span data-l="my">စက်အသစ် ထည့်ခြင်းနှင့် ဝင်ရောက်ခြင်း</span><span data-l="en">Adding a device &amp; signing in</span></h3>
+  <div class="dg">
+    <div class="row">
+      <div class="dev"><i>📱</i><span data-l="my">ပိုင်ရှင်</span><span data-l="en">Owner</span><small>QR</small></div>
+      <div class="arrow side">→</div>
+      <div class="dev"><i>📱</i><span data-l="my">စက်အသစ်</span><span data-l="en">New device</span><small data-l="my">စကင်ဖတ်</small><small data-l="en">scans</small></div>
+    </div>
+    <div class="hub">🔢 123 456 = 123 456 ✓</div>
+    <p class="cap"><span data-l="my">စခရင် နှစ်ခုလုံးတွင် ကုဒ် ၆ လုံး တူမှသာ သော့များ လွှဲပေးပါသည်။</span><span data-l="en">Keys are handed over only when both screens show the same 6 digits.</span></p>
+    <div class="row">
+      <div class="dev"><i>🔐</i><span data-l="my">ဝန်ထမ်းတိုင်း ကိုယ်ပိုင် PIN</span><span data-l="en">Own PIN per staff</span></div>
+      <div class="dev"><i>✈️</i><span data-l="my">Offline ဝင်နိုင်</span><span data-l="en">Works offline</span></div>
+      <div class="dev"><i>⏳</i><span data-l="my">မှားလျှင် ပိတ်</span><span data-l="en">Locks on wrong PINs</span></div>
+    </div>
+  </div>
+
+  <h3>3 · <span data-l="my">ရွေးချယ် စင့်ခ် (Subset)</span><span data-l="en">Subset sync</span></h3>
+  <div class="dg">
+    <div class="hub"><span data-l="my">လုပ်ငန်း ဒေတာ</span><span data-l="en">Business data</span> · <span data-l="my">ဆိုင် A</span><span data-l="en">Store A</span> · <span data-l="my">ဆိုင် B</span><span data-l="en">Store B</span></div>
+    <div class="arrow">↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+    <div class="row">
+      <div class="dev"><i>📱</i><span data-l="my">ဆိုင် A ငွေကောင်တာ</span><span data-l="en">Store A till</span><small data-l="my">ဆိုင် A ရောင်းချမှု + ကုန်ပစ္စည်း</small><small data-l="en">Store A sales + catalog</small></div>
+      <div class="dev"><i>💻</i><span data-l="my">ပိုင်ရှင်</span><span data-l="en">Owner</span><small data-l="my">အားလုံး</small><small data-l="en">Everything</small></div>
+    </div>
+  </div>
+  <p class="muted"><span data-l="my">ပိုင်ရှင်က စက်တစ်လုံးချင်းစီအတွက် ဆိုင်၊ ဒေတာ အမျိုးအစား၊ မှတ်တမ်း ရက်အရေအတွက်ကို ရွေးပါသည်။ ဆိုင်တစ်ဆိုင်ချင်း သီးခြား သော့ ရှိသဖြင့် အခြားဆိုင်၏ ဒေတာကို မဖတ်နိုင်ပါ။</span><span data-l="en">The owner picks each device's stores, data types and days of history. Each store has its own key, so a device can't read other stores.</span></p>
+
+  <h3>4 · <span data-l="my">ဒေတာ သိမ်းပုံ</span><span data-l="en">How data is saved</span></h3>
+  <div class="dg stack">
+    <div><span data-l="my">📱 သင့်စက်</span><span data-l="en">📱 Your device</span></div>
+    <div><span data-l="my">🗄️ SQLite ဒေတာဘေ့စ် — ဖိုင်တစ်ခုလုံး စာဝှက် (SQLCipher)</span><span data-l="en">🗄️ SQLite database — whole file encrypted (SQLCipher)</span></div>
+    <div><span data-l="my">🔑 သော့ကို ဖုန်း၏ Keystore / Keychain ထဲတွင်သာ သိမ်း</span><span data-l="en">🔑 Key kept only in the phone's Keystore / Keychain</span></div>
+    <div><span data-l="my">🔒 ဖောက်သည်၊ ဝန်ထမ်း၊ ရောင်းချမှု — ထပ်မံ စာဝှက်</span><span data-l="en">🔒 Customers, staff, sales — encrypted a second time</span></div>
+    <div><span data-l="my">💾 Backup ဖိုင် — သင့် စကားဝှက်ဖြင့် စာဝှက်၊ သင်ကိုယ်တိုင် သိမ်း</span><span data-l="en">💾 Backup file — locked with your passphrase, kept by you</span></div>
+  </div>
+
+  <h3>5 · <span data-l="my">လုံခြုံရေး</span><span data-l="en">Security</span></h3>
+  <ul>
+    <li><span data-l="my">စက်ကြား ပို့သမျှ AES‑256 ဖြင့် အစမှအဆုံး စာဝှက်ထားပါသည်။</span><span data-l="en">Everything sent between devices is end-to-end encrypted (AES‑256).</span></li>
+    <li><span data-l="my">ပြောင်းလဲမှုတိုင်းကို စက်က လက်မှတ်ထိုးပြီး ခွင့်ပြုချက် စစ်ပါသည်။</span><span data-l="en">Every change is signed by its device and checked against staff permissions.</span></li>
+    <li><span data-l="my">ပယ်ဖျက်ထားသော စက်ကို ချက်ချင်း ဖြတ်တောက်ပါသည်။</span><span data-l="en">A removed device is cut off at once.</span></li>
+  </ul>
+
+  <h3>6 · <span data-l="my">လုံခြုံသော Relay — ရွေးချယ်နိုင်</span><span data-l="en">Secured relay — optional</span></h3>
+  <div class="dg relay" id="relay-dg">
+    <button type="button" class="switch" id="relay-sw" role="switch" aria-checked="false"><span class="knob" aria-hidden="true"></span><span data-l="my">Relay</span><span data-l="en">Relay</span> <b class="st-off" data-l="my">ပိတ်</b><b class="st-off" data-l="en">Off</b><b class="st-on" data-l="my">ဖွင့်</b><b class="st-on" data-l="en">On</b></button>
+    <div class="row">
+      <div class="dev"><i>🏪</i><span data-l="my">ဆိုင်</span><span data-l="en">Shop</span></div>
+      <div class="cloud"><i>☁️</i><span data-l="my">Relay 24/7</span><span data-l="en">Relay 24/7</span><small>🔒</small></div>
+      <div class="dev"><i>🏠</i><span data-l="my">အိမ် / ဂိုဒေါင်</span><span data-l="en">Home / warehouse</span></div>
+    </div>
+    <p class="cap st-off"><span data-l="my">ပိတ်ထားလျှင် — စက်များ Wi‑Fi တစ်ခုတည်းတွင် တစ်ချိန်တည်း ရှိမှ စင့်ခ်ပါသည်။ အခမဲ့။</span><span data-l="en">Off — devices sync when they're on the same Wi‑Fi at the same time. Free.</span></p>
+    <p class="cap st-on"><span data-l="my">ဖွင့်ထားလျှင် — နေရာမတူ၊ အချိန်မတူလည်း စင့်ခ်ပါသည်။ စက်တစ်လုံးကို တစ်နေကုန် ဖွင့်ထားရန် မလိုတော့ပါ။ Relay သည် စာဝှက်ထားသော ဒေတာကိုသာ မြင်ပြီး မဖတ်နိုင်ပါ။</span><span data-l="en">On — devices catch up from anywhere, anytime, with no device left on all day. The relay only holds encrypted data it can't read.</span></p>
+  </div>
+  <p class="muted"><span data-l="my">ပိတ်လိုက်လျှင် သို့မဟုတ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi စင့်ခ် ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">Turn it off, or let it lapse, and the app and Wi‑Fi sync keep working.</span> <span class="nojs-hide st-off"><span data-l="my">ဈေးနှုန်းများ ကြည့်ရန် Relay ကို ဖွင့်ပါ။</span><span data-l="en">Switch the relay on to see prices.</span></span></p>
+</section>
+
+<section id="plans" class="paid">
   <h2><span data-l="my">အစီအစဉ်များနှင့် ဈေးနှုန်း</span><span data-l="en">Plans &amp; pricing</span></h2>
   <p class="badge"><span data-l="my">စမ်းသပ်ကာလ ဈေးနှုန်း — ပြောင်းလဲနိုင်ပါသည်</span><span data-l="en">Pilot prices — may change</span></p>
-
-  <h3><span data-l="my">အမြဲ အခမဲ့</span><span data-l="en">Always free</span></h3>
-  <ul>
-    <li><span data-l="my">ပလက်ဖောင်းတိုင်းရှိ အက်ပ်၊ module အားလုံး၊ ဖုန်းထဲရှိ ဒေတာအားလုံး</span><span data-l="en">The app on every platform, every module, all your local data</span></li>
-    <li><span data-l="my">အင်တာနက်မရှိဘဲ (offline) သုံးနိုင်ခြင်း</span><span data-l="en">Offline use</span></li>
-    <li><span data-l="my">စက်အချင်းချင်း တိုက်ရိုက် စင့်ခ် — Wi‑Fi/LAN၊ Bluetooth၊ bundle ဖိုင်၊ QR ဖြင့် ချိတ်ဆက်ခြင်း</span><span data-l="en">Peer-to-peer and LAN sync — Wi‑Fi/LAN, Bluetooth, bundle files, QR pairing</span></li>
-    <li><span data-l="my">ကိုယ်တိုင် သိမ်းသော စာဝှက်ထားသည့် Backup ဖိုင်များ</span><span data-l="en">Encrypted backup files you save yourself</span></li>
-    <li><span data-l="my">Telegram inbox (polling)</span><span data-l="en">Telegram inbox polling</span></li>
-  </ul>
-  <p class="muted"><span data-l="my">အခမဲ့ အက်ပ်တွင် "ကြော်ငြာ" ဟု ရေးထားသော ပေးသွင်းသူ ကမ်းလှမ်းချက် အသေးလေးများ ပြပါသည်။ ငွေရှင်းချိန်နှင့် ငွေပေးချေချိန်တွင် ဘယ်တော့မှ မပြပါ။</span><span data-l="en">The free app shows small supplier offers labelled as ads — never at checkout or payment.</span></p>
-
-  <h3><span data-l="my">ပိုက်ဆံပေးရသည့် တစ်ခုတည်း — Sync server (ရွေးချယ်နိုင်)</span><span data-l="en">The only paid thing — the sync server (optional)</span></h3>
-  <p><span data-l="my">အမြဲဖွင့်ထားသော၊ အစမှအဆုံး စာဝှက်ထားသည့် စာတိုက်ပုံး ဖြစ်ပါသည်။ နေရာမတူသော သို့မဟုတ် အချိန်မတူ ဖွင့်သော စက်များလည်း ဒေတာ မီလာပါမည်။ စာဝှက်ထားသော Backup ကို အပြင်ဘက်တွင် သိမ်းပေးပြီး customer-inbox webhook များကိုလည်း လက်ခံပေးပါသည်။</span><span data-l="en">An always-on, end-to-end encrypted mailbox. Devices in different places, or switched on at different times, still catch up. It also keeps an off-site encrypted backup and receives customer-inbox webhooks.</span></p>
-  <ul>
-    <li><span data-l="my">Server သည် သင့်ဒေတာကို ဖတ်၍ မရ၊ စက်အသစ် ထည့်၍ မရ၊ မည်သူ့ကိုမျှ ဝင်ခွင့်ပေး၍ မရပါ။ စာဝှက်ထားသော ဒေတာ၊ အရွယ်အစားနှင့် အချိန်ကိုသာ မြင်ပါသည်။</span><span data-l="en">The server can't read your data, add devices or sign anyone in. It only sees encrypted data, plus sizes and timestamps.</span></li>
-    <li><span data-l="my">အစီအစဉ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi/LAN စင့်ခ် ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">If a plan lapses, the app and local Wi‑Fi/LAN sync keep working.</span></li>
-    <li><span data-l="my">ကန့်သတ်ချက်များသည် server အတွက်သာ ဖြစ်ပါသည်။ LAN စင့်ခ်မှာ အခမဲ့ ဖြစ်ပြီး အကန့်အသတ် မရှိပါ။</span><span data-l="en">Limits apply only to the hosted server. LAN sync is free and unlimited.</span></li>
-  </ul>
 
   <div class="plan">
     <h3>Free</h3>
@@ -159,7 +242,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <p class="muted"><span data-l="my">ပိုက်ဆံပေး အစီအစဉ်များတွင် ကြော်ငြာ နည်းပါသည် — ကြော်ငြာနေရာ အများစုကို ပိတ်ထားပြီး ပိုင်ရှင်က အနည်းငယ်ကိုသာ ဖွင့်ရန် ရွေးနိုင်ပါသည်။</span><span data-l="en">Paid plans show fewer ads: most ad spots are off, and owners can opt in to a few.</span></p>
 </section>
 
-<section id="pay">
+<section id="pay" class="paid">
   <h2><span data-l="my">ငွေပေးချေနည်း</span><span data-l="en">How to pay</span></h2>
   <p class="badge"><span data-l="my">စမ်းသပ်ကာလ — လက်ဖြင့် အတည်ပြုပါသည်</span><span data-l="en">Pilot — approved by hand</span></p>
   <p><span data-l="my">KBZPay၊ WavePay သို့မဟုတ် ဘဏ်လွှဲဖြင့် ပေးနိုင်ပါသည်။</span><span data-l="en">Pay by KBZPay, WavePay or bank transfer.</span></p>
@@ -190,6 +273,11 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
 <script>
 (function(){var h=document.documentElement,k='apexbos-site-lang';try{var s=localStorage.getItem(k);if(s==='en'||s==='my')h.lang=s}catch(e){}
 document.getElementById('lang').addEventListener('click',function(){h.lang=h.lang==='en'?'my':'en';try{localStorage.setItem(k,h.lang)}catch(e){}});})();
+(function(){var h=document.documentElement,sw=document.getElementById('relay-sw');if(!sw)return;h.classList.add('js');
+function set(on){h.classList.toggle('relay-on',on);sw.setAttribute('aria-checked',on?'true':'false');}
+sw.addEventListener('click',function(){set(!h.classList.contains('relay-on'));});
+function hash(){if(location.hash==='#plans'||location.hash==='#pay'){set(true);var e=document.querySelector(location.hash);if(e)e.scrollIntoView();}}
+hash();window.addEventListener('hashchange',hash);})();
 </script>
 </body>
 </html>
