@@ -10,5 +10,10 @@
       "url": "https://apexbos.github.io/apk/ApexBOS-0.2.23-release.apk",
       "sha256": "b45b0057ad440f41136661ddbfe026b28a699439b88b7d6fbf2a31d6bc021dfc"
     }
+  },
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "apex-upd-2026a",
+    "sig": "pjx2_YNT3Oml1m2-nENgd9T44ZwQMZCabaTPnaKwh7p9rXW6eONY8WGbZhdXYCnX2z8d0z7nY73SJlEbLLPXDA"
   }
 }
