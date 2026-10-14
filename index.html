@@ -93,7 +93,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <h2><span data-l="my">အပ်ဒိတ် မလုပ်မီ</span><span data-l="en">Before you update</span></h2>
   <ul>
     <li><span data-l="my"><b>Backup အရင်လုပ်ပါ</b> — ဆက်တင် → Backup။ ဖိုင်ကို ဖုန်းအပြင် (Drive, USB…) တွင်လည်း သိမ်းထားပါ။</span><span data-l="en"><b>Make a Backup first</b> — Settings → Backup. Keep a copy off the phone too (Drive, USB…).</span></li>
-    <li><span data-l="my"><b>လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို အတူတူ အပ်ဒိတ်လုပ်ပါ</b> — ဗားရှင်း မတူသော စက်များသည် ဒေတာ ကောင်းစွာ မစင့်ခ်နိုင်ပါ။</span><span data-l="en"><b>Update every device in a business together</b> — devices on different versions may not sync properly.</span></li>
+    <li><span data-l="my"><b>လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို အတူတူ အပ်ဒိတ်လုပ်ပါ</b> — ဗားရှင်း မတူသော စက်များသည် ဒေတာ ကောင်းစွာ မSyncနိုင်ပါ။</span><span data-l="en"><b>Update every device in a business together</b> — devices on different versions may not sync properly.</span></li>
   </ul>
 </section>
 
@@ -107,25 +107,11 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   </ol>
 </section>
 
-<section>
-  <h2><span data-l="my">စမ်းသပ်ဖုန်းများ — တစ်ကြိမ်သာ</span><span data-l="en">Test phones — one time only</span></h2>
-  <p><span data-l="my">ဗားရှင်းဟောင်း စမ်းသပ် (debug) build သုံးနေသော ဖုန်းတွင် "App not installed" ပြလျှင် —</span><span data-l="en">If a phone on an old test (debug) build says "App not installed":</span></p>
-  <ol>
-    <li><span data-l="my">ဗားရှင်းဟောင်းထဲတွင် <b>Backup</b> လုပ်ပြီး ဖိုင်နှင့် စကားဝှက်ကို သိမ်းပါ။</span><span data-l="en">Make a <b>Backup</b> in the old app; keep the file and its password.</span></li>
-    <li><span data-l="my">ApexBOS ဟောင်းကို <b>ဖြုတ်ပါ</b> (Uninstall)။</span><span data-l="en"><b>Uninstall</b> the old ApexBOS.</span></li>
-    <li><span data-l="my">APK အသစ်ကို <b>ထည့်သွင်းပါ</b>။</span><span data-l="en"><b>Install</b> the new APK.</span></li>
-    <li><span data-l="my">Backup ဖိုင်ဖြင့် <b>Restore</b> လုပ်ပါ။</span><span data-l="en"><b>Restore</b> from the Backup file.</span></li>
-    <li><span data-l="my">စက်များ → ဤစက်ကို အခြားစက်များနှင့် <b>ပြန်ချိတ်ပါ</b>။</span><span data-l="en">Devices → <b>pair</b> this device with the others again.</span></li>
-  </ol>
-  <p class="muted"><span data-l="my">နောက်ပိုင်း အပ်ဒိတ်များကို ဖြုတ်စရာမလိုဘဲ တိုက်ရိုက် ထည့်နိုင်ပါသည်။</span><span data-l="en">After this, updates install directly — no uninstall.</span></p>
-</section>
-
-
 <section id="how">
   <h2><span data-l="my">ApexBOS အလုပ်လုပ်ပုံ</span><span data-l="en">How ApexBOS works</span></h2>
   <p><span data-l="my">အက်ပ်နှင့် ဒေတာ အားလုံး သင့်စက်ထဲမှာ ရှိပြီး <b>အခမဲ့</b> ဖြစ်ပါသည်။ ပိုက်ဆံပေးရသည်မှာ ရွေးချယ်နိုင်သော relay တစ်ခုတည်းသာ။</span><span data-l="en">The app and all your data live on your devices, <b>free</b>. The only paid part is an optional relay.</span></p>
 
-  <h3>1 · <span data-l="my">ဆိုင်ထဲ စင့်ခ် — အခမဲ့</span><span data-l="en">Local sync — free</span></h3>
+  <h3>1 · <span data-l="my">ဆိုင်ထဲ Sync — အခမဲ့</span><span data-l="en">Local sync — free</span></h3>
   <div class="dg">
     <div class="row">
       <div class="dev"><i>📱</i>Android</div><div class="dev"><i>📱</i>iPhone</div><div class="dev"><i>💻</i>Windows</div><div class="dev"><i>🖥️</i>Mac · Linux</div>
@@ -152,7 +138,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
     </div>
   </div>
 
-  <h3>3 · <span data-l="my">ရွေးချယ် စင့်ခ် (Subset)</span><span data-l="en">Subset sync</span></h3>
+  <h3>3 · <span data-l="my">ရွေးချယ် Sync (Subset)</span><span data-l="en">Subset sync</span></h3>
   <div class="dg">
     <div class="hub"><span data-l="my">လုပ်ငန်း ဒေတာ</span><span data-l="en">Business data</span> · <span data-l="my">ဆိုင် A</span><span data-l="en">Store A</span> · <span data-l="my">ဆိုင် B</span><span data-l="en">Store B</span></div>
     <div class="arrow">↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
@@ -179,7 +165,16 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
     <li><span data-l="my">ပယ်ဖျက်ထားသော စက်ကို ချက်ချင်း ဖြတ်တောက်ပါသည်။</span><span data-l="en">A removed device is cut off at once.</span></li>
   </ul>
 
-  <h3>6 · <span data-l="my">လုံခြုံသော Relay — ရွေးချယ်နိုင်</span><span data-l="en">Secured relay — optional</span></h3>
+  <h3>6 · <span data-l="my">တစ်နေကုန် Sync လိုလျှင်</span><span data-l="en">When you need sync all day</span></h3>
+  <p><span data-l="my">စက်များ တစ်ချိန်တည်း မဖွင့်ထားလည်း Sync ဖြစ်စေရန် ဆိုင်ရှိ စက်တစ်လုံး (ကွန်ပျူတာ သို့မဟုတ် ဖုန်းဟောင်း) ကို အမြဲဖွင့်ထားပြီး ဗဟိုစက်အဖြစ် သုံးနိုင်ပါသည်။ အခမဲ့ ဖြစ်ပါသည်။</span><span data-l="en">So devices catch up even when they aren't on at the same time, keep one device at the shop (a PC or an old phone) on all the time as the hub. It's free.</span></p>
+  <div class="dg">
+    <div class="row">
+      <div class="dev"><i>🖥️</i><span data-l="my">စက်တစ်လုံးကို အမြဲဖွင့်ထား</span><span data-l="en">Keep one device on all the time</span></div>
+    </div>
+  </div>
+  <p class="muted"><span data-l="my">ဆော့ဖ်ဝဲ အခမဲ့ ဖြစ်သော်လည်း စက်၊ လျှပ်စစ်မီးနှင့် ပြုပြင်ထိန်းသိမ်းမှု ကုန်ကျစရိတ် ရှိပြီး ဆိုင် Wi‑Fi ပေါ်ရှိ စက်များအတွက်သာ ဖြစ်ပါသည်။</span><span data-l="en">The software is free, but you pay for the device, the electricity and the upkeep, and it only serves devices on the shop's Wi‑Fi.</span></p>
+
+  <h3>7 · <span data-l="my">လုံခြုံသော Relay — ရွေးချယ်နိုင်</span><span data-l="en">Secured relay — optional</span></h3>
   <div class="dg relay" id="relay-dg">
     <button type="button" class="switch" id="relay-sw" role="switch" aria-checked="false"><span class="knob" aria-hidden="true"></span><span data-l="my">Relay</span><span data-l="en">Relay</span> <b class="st-off" data-l="my">ပိတ်</b><b class="st-off" data-l="en">Off</b><b class="st-on" data-l="my">ဖွင့်</b><b class="st-on" data-l="en">On</b></button>
     <div class="row">
@@ -187,10 +182,10 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
       <div class="cloud"><i>☁️</i><span data-l="my">Relay 24/7</span><span data-l="en">Relay 24/7</span><small>🔒</small></div>
       <div class="dev"><i>🏠</i><span data-l="my">အိမ် / ဂိုဒေါင်</span><span data-l="en">Home / warehouse</span></div>
     </div>
-    <p class="cap st-off"><span data-l="my">ပိတ်ထားလျှင် — စက်များ Wi‑Fi တစ်ခုတည်းတွင် တစ်ချိန်တည်း ရှိမှ စင့်ခ်ပါသည်။ အခမဲ့။</span><span data-l="en">Off — devices sync when they're on the same Wi‑Fi at the same time. Free.</span></p>
-    <p class="cap st-on"><span data-l="my">ဖွင့်ထားလျှင် — နေရာမတူ၊ အချိန်မတူလည်း စင့်ခ်ပါသည်။ စက်တစ်လုံးကို တစ်နေကုန် ဖွင့်ထားရန် မလိုတော့ပါ။ Relay သည် စာဝှက်ထားသော ဒေတာကိုသာ မြင်ပြီး မဖတ်နိုင်ပါ။</span><span data-l="en">On — devices catch up from anywhere, anytime, with no device left on all day. The relay only holds encrypted data it can't read.</span></p>
+    <p class="cap st-off"><span data-l="my">ပိတ်ထားလျှင် — စက်များ Wi‑Fi တစ်ခုတည်းတွင် တစ်ချိန်တည်း ရှိမှ Syncပါသည်။ အခမဲ့။</span><span data-l="en">Off — devices sync when they're on the same Wi‑Fi at the same time. Free.</span></p>
+    <p class="cap st-on"><span data-l="my">ဖွင့်ထားလျှင် — နေရာမတူ၊ အချိန်မတူလည်း Syncပါသည်။ စက်တစ်လုံးကို တစ်နေကုန် ဖွင့်ထားရန် မလိုတော့သဖြင့် လျှပ်စစ်မီးနှင့် စက်ကုန်ကျစရိတ် သက်သာပါသည်။ Relay သည် စာဝှက်ထားသော ဒေတာကိုသာ မြင်ပြီး မဖတ်နိုင်ပါ။</span><span data-l="en">On — devices catch up from anywhere, anytime. No device left on all day, so you save on electricity and hardware. The relay only holds encrypted data it can't read.</span></p>
   </div>
-  <p class="muted"><span data-l="my">ပိတ်လိုက်လျှင် သို့မဟုတ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi စင့်ခ် ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">Turn it off, or let it lapse, and the app and Wi‑Fi sync keep working.</span> <span class="nojs-hide st-off"><span data-l="my">ဈေးနှုန်းများ ကြည့်ရန် Relay ကို ဖွင့်ပါ။</span><span data-l="en">Switch the relay on to see prices.</span></span></p>
+  <p class="muted"><span data-l="my">ပိတ်လိုက်လျှင် သို့မဟုတ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi Sync ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">Turn it off, or let it lapse, and the app and Wi‑Fi sync keep working.</span> <span class="nojs-hide st-off"><span data-l="my">ဈေးနှုန်းများ ကြည့်ရန် Relay ကို ဖွင့်ပါ။</span><span data-l="en">Switch the relay on to see prices.</span></span></p>
 </section>
 
 <section id="plans" class="paid">
@@ -200,7 +195,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <div class="plan">
     <h3>Free</h3>
     <p class="price">0 <span data-l="my">ကျပ်</span><span data-l="en">Ks</span></p>
-    <p><span data-l="my">Wi‑Fi/LAN စင့်ခ်သာ (server မပါ)</span><span data-l="en">Wi‑Fi/LAN sync only (no server)</span></p>
+    <p><span data-l="my">Wi‑Fi/LAN Syncသာ (server မပါ)</span><span data-l="en">Wi‑Fi/LAN sync only (no server)</span></p>
   </div>
   <div class="plan">
     <h3>Trial</h3>
