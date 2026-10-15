@@ -5,50 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>ApexBOS — လုပ်ငန်းလည်ပတ်မှုစနစ် · Business Operating System</title>
-<meta name="description" content="ApexBOS Android app — download the latest signed APK. ApexBOS Android အက်ပ် နောက်ဆုံးဗားရှင်း ဒေါင်းလုဒ်။">
+<meta name="description" content="ApexBOS — Business Operating System: offline-first POS, inventory and more for Myanmar businesses. Download the signed Android APK or open the web app. ApexBOS Android အက်ပ် နောက်ဆုံးဗားရှင်း ဒေါင်းလုဒ်။">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-:root{--bg:#f7f8fa;--card:#fff;--text:#111827;--muted:#4b5563;--line:#d1d5db;--accent:#1d4ed8;--accent-text:#fff;--warn-bg:#fff7ed;--warn-line:#c2410c;--code:#f1f5f9}
-@media (prefers-color-scheme:dark){:root{--bg:#0b1120;--card:#111a2e;--text:#f3f4f6;--muted:#c3cad6;--line:#334155;--accent:#60a5fa;--accent-text:#0b1120;--warn-bg:#2a1a0e;--warn-line:#fb923c;--code:#1e293b}}
+:root{--bg:#f5f7fb;--card:#fff;--soft:#eef2f8;--text:#0f172a;--muted:#475569;--line:#d8dee8;--accent:#1d4ed8;--accent2:#6d28d9;--accent-text:#fff;--tint:#e8efff;--ok:#15803d;--warn-bg:#fff7ed;--warn-line:#c2410c;--code:#eef2f7;--shadow:0 1px 2px rgba(15,23,42,.06),0 4px 16px rgba(15,23,42,.06)}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1120;--card:#111a2e;--soft:#16213a;--text:#f1f5f9;--muted:#c3cad6;--line:#2b3a55;--accent:#60a5fa;--accent2:#a78bfa;--accent-text:#0b1120;--tint:#172a4d;--ok:#4ade80;--warn-bg:#2a1a0e;--warn-line:#fb923c;--code:#1b2740;--shadow:0 1px 2px rgba(0,0,0,.3)}}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans Myanmar","Myanmar Text",Padauk,Roboto,sans-serif}
-main{max-width:40rem;margin:0 auto;padding:1rem 1rem 3rem}
-header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.5rem 0 1rem}
-.brand{display:flex;align-items:center;gap:.75rem;min-width:0}
-.logo{flex:none;width:44px;height:44px;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
-.logo svg{display:block}
-.brand b{display:block;font-size:1.15rem;line-height:1.3}
-.brand span{display:block;color:var(--muted);font-size:.9rem;line-height:1.4}
-button.lang{min-height:44px;min-width:44px;padding:0 1rem;border-radius:22px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:.95rem;cursor:pointer}
-section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin:0 0 1rem}
-h1{font-size:1.35rem;line-height:1.4;margin:0 0 .25rem}
-h2{font-size:1.1rem;line-height:1.4;margin:0 0 .5rem}
-p{margin:.25rem 0 .5rem}
+[id]{scroll-margin-top:4.75rem}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1rem}
+/* top nav */
+.top{position:sticky;top:0;z-index:10;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:.5rem;min-height:3.75rem}
+.brand{display:flex;align-items:center;gap:.6rem;flex:none;min-height:44px;color:var(--text);text-decoration:none;font-weight:700;font-size:1.05rem}
+.brand .logo{width:36px;height:36px}
+.brand .bn{display:none}
+.nav{flex:1;min-width:0;display:flex;gap:.15rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 .7rem;border-radius:10px;color:var(--muted);text-decoration:none;font-size:.93rem;white-space:nowrap}
+.nav a:hover{background:var(--soft);color:var(--text)}
+.nav a.cta{color:var(--accent);font-weight:700}
+@media (min-width:52rem){.brand .bn{display:inline}.nav{justify-content:flex-end}}
+.logo{flex:none;border-radius:22%;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.logo svg{display:block;width:100%;height:100%}
+button.lang{flex:none;min-height:44px;min-width:44px;padding:0 .9rem;border-radius:22px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:.9rem;cursor:pointer}
+/* hero */
+.hero{padding:2.5rem 0 1.5rem;text-align:center}
+.hero .logo{width:88px;height:88px;margin:0 auto 1rem;box-shadow:var(--shadow),0 0 0 1px var(--line)}
+.hero h1{margin:0;font-size:2.4rem;line-height:1.15;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin:.35rem 0 0;font-weight:600;color:var(--muted);font-size:1.05rem}
+.hero .lead{max-width:36rem;margin:.9rem auto 0;font-size:1.15rem;line-height:1.65}
+.ctas{display:flex;flex-direction:column;gap:.6rem;max-width:22rem;margin:1.5rem auto .9rem}
+@media (min-width:36rem){.ctas{flex-direction:row;max-width:none;justify-content:center}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.5rem 1.4rem;border-radius:12px;font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-text);box-shadow:var(--shadow)}
+.btn.ghost{background:var(--card);color:var(--accent)}
+.meta{color:var(--muted);font-size:.92rem;margin:.25rem 0}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin:1.25rem auto 0;max-width:44rem;padding:0;list-style:none}
+.pills li{margin:0;padding:.3rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:.88rem}
+/* cards */
+main{padding-bottom:2rem}
+section.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.25rem 1.1rem;margin:0 0 1.25rem;box-shadow:var(--shadow)}
+@media (min-width:40rem){section.card{padding:1.6rem 1.75rem}}
+.eyebrow{display:block;margin:0 0 .2rem;color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+h2{font-size:1.4rem;line-height:1.35;margin:0 0 .6rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;line-height:1.4;margin:1.1rem 0 .35rem}
+p{margin:.3rem 0 .6rem}
 .muted{color:var(--muted)}
-a.dl{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;margin:.75rem 0 .5rem;padding:.5rem 1rem;border-radius:12px;background:var(--accent);color:var(--accent-text);font-weight:700;font-size:1.05rem;text-decoration:none}
-a.dl.web{background:transparent;color:var(--accent);border:2px solid var(--accent)}
-.steps-web{margin:.25rem 0 0;padding-left:1.25rem}.steps-web li{margin:.35rem 0}
-details.lim{margin:.75rem 0;padding:.5rem .75rem;border:1px solid var(--warn-line);border-radius:12px}details.lim summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}details.lim h3{font-size:1rem;margin:.75rem 0 .25rem}details.lim ul{margin:0;padding-left:1.25rem}details.lim li{margin:.3rem 0}
-a.dl:focus-visible,button.lang:focus-visible,a:focus-visible{outline:3px solid var(--warn-line);outline-offset:2px}
 a{color:var(--accent);word-break:break-word}
-ol,ul{margin:.25rem 0 .5rem;padding-left:1.4rem}
+ol,ul{margin:.3rem 0 .6rem;padding-left:1.4rem}
 li{margin:.3rem 0}
-.hash{display:block;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);padding:.5rem .6rem;border-radius:8px;word-break:break-all;user-select:all}
-h3{font-size:1rem;line-height:1.4;margin:.75rem 0 .25rem}
-.badge{display:inline-block;margin:.25rem 0 .5rem;padding:.2rem .7rem;border-radius:999px;background:var(--warn-bg);border:1px solid var(--warn-line);font-size:.9rem;font-weight:600}
-.plan{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;margin:.6rem 0}
+.split{display:grid;gap:1.25rem;align-items:start}
+@media (min-width:50rem){.split{grid-template-columns:1fr 1fr;gap:2rem}.split>div+div{border-left:1px solid var(--line);padding-left:2rem}}
+.split h2{font-size:1.2rem}
+a.dl{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;margin:.75rem 0 .5rem;padding:.5rem 1rem;border-radius:12px;background:var(--accent);color:var(--accent-text);font-weight:700;font-size:1.05rem;text-decoration:none;box-shadow:var(--shadow)}
+a.dl.web{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none}
+.steps-web{margin:.25rem 0 0;padding-left:1.25rem}.steps-web li{margin:.35rem 0}
+details.lim{margin:.9rem 0;padding:.25rem .9rem;border:1px solid var(--warn-line);border-radius:12px;background:var(--warn-bg)}details.lim summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}details.lim h3{font-size:1rem;margin:.75rem 0 .25rem}details.lim ul{margin:0;padding-left:1.25rem}details.lim li{margin:.3rem 0}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--warn-line);outline-offset:2px}
+.note{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.hash{display:block;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);padding:.6rem .7rem;border-radius:8px;word-break:break-all;user-select:all}
+.badge{display:inline-block;margin:.35rem 0 .6rem;padding:.35rem .8rem;border-radius:12px;background:var(--warn-bg);border:1px solid var(--warn-line);font-size:.9rem;font-weight:600;line-height:1.55}
+.plans-grid{display:grid;gap:.75rem;margin:.6rem 0}
+@media (min-width:40rem){.plans-grid{grid-template-columns:repeat(auto-fill,minmax(14.5rem,1fr))}}
+.plan{border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;background:var(--card)}
 .plan h3{margin:.1rem 0}
-.price{font-weight:700;margin:.1rem 0 .3rem}
-.dg{border:1px solid var(--line);border-radius:12px;padding:.75rem;margin:.5rem 0 .6rem;background:var(--code)}
+.price{font-weight:700;margin:.1rem 0 .3rem;color:var(--accent)}
+.dg{border:1px solid var(--line);border-radius:12px;padding:.85rem;margin:.5rem 0 .75rem;background:var(--soft)}
 .row{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center}
 .dev,.cloud{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.4rem .6rem;font-size:.88rem;line-height:1.4;text-align:center;min-width:4.6rem;max-width:9.5rem}
 .dev i,.cloud i{display:block;font-style:normal;font-size:1.5rem;line-height:1.3}
 .dev small,.cloud small{display:block;color:var(--muted);font-size:.8rem}
 .hub{margin:.35rem auto;max-width:18rem;text-align:center;font-weight:600;border:2px solid var(--accent);border-radius:10px;padding:.35rem .6rem;background:var(--card)}
 .arrow{text-align:center;color:var(--accent);font-size:1.3rem;line-height:1.2;font-weight:700}
-.arrow.side{min-width:auto}
 .chips{text-align:center;margin-top:.4rem}
 .chips span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.05rem .6rem;margin:.15rem;font-size:.82rem;background:var(--card)}
 .cap{text-align:center;font-size:.9rem;margin:.4rem 0}
@@ -68,34 +101,82 @@ html.relay-on .relay .cloud{opacity:1;border:2px solid var(--accent)}
 html:not(.relay-on) .st-on,html.relay-on .st-off{display:none!important}
 html.js:not(.relay-on) .paid{display:none!important}
 html:not(.js) .nojs-hide{display:none}
-button.switch:focus-visible{outline:3px solid var(--warn-line);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){button.switch .knob,button.switch .knob::after,.relay .cloud{transition:none}}
 .plats{margin:.6rem 0 .4rem}
 .prow{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 .5rem}
 .plat{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;min-width:68px;min-height:64px;padding:.4rem .5rem;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.85rem;line-height:1.2}
 .plat.on{border:2px solid #16a34a;color:var(--text)}
 .plat.on svg{color:#3ddc84}
-.tag{display:inline-block;vertical-align:middle;margin-left:.4rem;padding:.05rem .6rem;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff}
+.tag{display:inline-block;vertical-align:middle;margin-left:.5rem;padding:.05rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.02em}
 .tag.free{background:#15803d}
 .tag.paid{background:var(--warn-line)}
+.tag.soon{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:600;margin-left:.3rem}
 @media (prefers-color-scheme:dark){.tag.free{background:#166534}.tag.paid{color:#0b1120}}
-.warn{background:var(--warn-bg);border-color:var(--warn-line)}
-footer{color:var(--muted);font-size:.85rem;text-align:center;padding-top:.5rem}
+section.warn{background:var(--warn-bg);border-color:var(--warn-line)}
+/* features */
+.fgrid{display:grid;gap:1rem;margin:1rem 0}
+@media (min-width:40rem){.fgrid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:62rem){.fgrid{grid-template-columns:repeat(3,1fr)}}
+.fg{border:1px solid var(--line);border-radius:14px;padding:1rem 1.05rem;background:var(--card)}
+.fg h3{display:flex;align-items:center;gap:.6rem;margin:0 0 .5rem;font-size:1.05rem}
+.fg h3 i{flex:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:var(--tint);font-style:normal;font-size:1.25rem}
+.fg ul{list-style:none;margin:0;padding:0}
+.fg li{position:relative;margin:.4rem 0;padding-left:1.25rem;font-size:.94rem;line-height:1.6}
+.fg li::before{content:"";position:absolute;left:.15rem;top:.62em;width:.45rem;height:.45rem;border-radius:50%;background:var(--accent)}
+.types{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 0;padding:0;list-style:none}
+.types li{margin:0;padding:.2rem .7rem;border-radius:999px;background:var(--tint);font-size:.88rem}
+.endcta{text-align:center;margin-top:1.25rem}
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--card);color:var(--muted);font-size:.9rem;text-align:center;padding:2rem 0 2.5rem}
+footer h2{color:var(--text);font-size:1.15rem;margin:0 0 .25rem}
+footer .mail{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;margin:.4rem 0 1rem;padding:.4rem 1.2rem;border-radius:12px;border:2px solid var(--accent);color:var(--accent);font-weight:700;text-decoration:none}
+footer .links a{display:inline-flex;align-items:center;min-height:44px;padding:0 .4rem}
 html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!important}
 </style>
 </head>
 <body>
-<main>
-<header>
-  <div class="brand">
-    <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" aria-hidden="true" viewBox="0 0 512 512"><style>.b0{stop-color:#F8FAFC}.b1{stop-color:#E2E8F0}.a0{stop-color:#2563EB}.a1{stop-color:#7C3AED}@media (prefers-color-scheme:dark){.b0{stop-color:#1E293B}.b1{stop-color:#0F172A}.a0{stop-color:#60A5FA}.a1{stop-color:#A78BFA}}</style><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="b0"/><stop offset="1" class="b1"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="a0"/><stop offset="1" class="a1"/></linearGradient></defs><rect width="512" height="512" rx="114" fill="url(#bg)"/><path d="M256 104 C268 104 278 111 283 122 L404 382 C412 399 400 416 381 416 H340 C330 416 321 410 317 401 L256 262 L195 401 C191 410 182 416 172 416 H131 C112 416 100 399 108 382 L229 122 C234 111 244 104 256 104 Z" fill="url(#a)"/></svg></div>
-    <div><b>ApexBOS</b><span lang="my">လုပ်ငန်းလည်ပတ်မှုစနစ်</span><span lang="en">Business Operating System</span></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ApexBOS"><span class="logo"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512"><style>.b0{stop-color:#F8FAFC}.b1{stop-color:#E2E8F0}.a0{stop-color:#2563EB}.a1{stop-color:#7C3AED}@media (prefers-color-scheme:dark){.b0{stop-color:#1E293B}.b1{stop-color:#0F172A}.a0{stop-color:#60A5FA}.a1{stop-color:#A78BFA}}</style><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="b0"/><stop offset="1" class="b1"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="a0"/><stop offset="1" class="a1"/></linearGradient></defs><rect width="512" height="512" rx="114" fill="url(#bg)"/><path d="M256 104 C268 104 278 111 283 122 L404 382 C412 399 400 416 381 416 H340 C330 416 321 410 317 401 L256 262 L195 401 C191 410 182 416 172 416 H131 C112 416 100 399 108 382 L229 122 C234 111 244 104 256 104 Z" fill="url(#a)"/></svg></span><span class="bn">ApexBOS</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#get" class="cta"><span data-l="my">ဒေါင်းလုဒ်</span><span data-l="en">Download</span></a>
+      <a href="#web"><span data-l="my">ဝဘ်အက်ပ်</span><span data-l="en">Web app</span></a>
+      <a href="#install"><span data-l="my">ထည့်သွင်းနည်း</span><span data-l="en">Install</span></a>
+      <a href="#how"><span data-l="my">အလုပ်လုပ်ပုံ</span><span data-l="en">How it works</span></a>
+      <a href="#relay">Relay</a>
+      <a href="#features"><span data-l="my">လုပ်ဆောင်ချက်များ</span><span data-l="en">Features</span></a>
+      <a href="#contact"><span data-l="my">ဆက်သွယ်ရန်</span><span data-l="en">Contact</span></a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="English / မြန်မာ"><span data-l="my">English</span><span data-l="en">မြန်မာ</span></button>
   </div>
-  <button class="lang" id="lang" type="button" aria-label="English / မြန်မာ"><span data-l="my">English</span><span data-l="en">မြန်မာ</span></button>
 </header>
 
-<section>
-  <h1><span data-l="my">ApexBOS ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS</span></h1>
+<main id="top">
+<div class="wrap">
+
+<section class="hero">
+  <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512"><style>.b0{stop-color:#F8FAFC}.b1{stop-color:#E2E8F0}.a0{stop-color:#2563EB}.a1{stop-color:#7C3AED}@media (prefers-color-scheme:dark){.b0{stop-color:#1E293B}.b1{stop-color:#0F172A}.a0{stop-color:#60A5FA}.a1{stop-color:#A78BFA}}</style><defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="b0"/><stop offset="1" class="b1"/></linearGradient><linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="a0"/><stop offset="1" class="a1"/></linearGradient></defs><rect width="512" height="512" rx="114" fill="url(#bg2)"/><path d="M256 104 C268 104 278 111 283 122 L404 382 C412 399 400 416 381 416 H340 C330 416 321 410 317 401 L256 262 L195 401 C191 410 182 416 172 416 H131 C112 416 100 399 108 382 L229 122 C234 111 244 104 256 104 Z" fill="url(#a2)"/></svg></div>
+  <h1><span class="grad">ApexBOS</span></h1>
+  <p class="sub"><span data-l="my">လုပ်ငန်းလည်ပတ်မှုစနစ်</span><span data-l="en">Business Operating System</span></p>
+  <p class="lead"><span data-l="my">မြန်မာလုပ်ငန်းများအတွက် အင်တာနက် မလိုဘဲ အလုပ်လုပ်သော POS၊ ကုန်ပစ္စည်းစာရင်းနှင့် အခြား လုပ်ငန်းသုံး module များ — စက်တစ်လုံးတည်းမှ ဆိုင်ခွဲများအထိ။</span><span data-l="en">Offline-first POS, inventory and more for Myanmar businesses — from one phone to many branches.</span></p>
+  <div class="ctas">
+    <a class="btn primary" href="#get"><span aria-hidden="true">⬇</span> <span data-l="my">ဒေါင်းလုဒ် (0.2.34)</span><span data-l="en">Download (0.2.34)</span></a>
+    <a class="btn ghost" href="#features"><span data-l="my">ApexBOS ၏ လုပ်ဆောင်ချက်အားလုံး ကြည့်ရန်</span><span data-l="en">See everything ApexBOS does</span> <span aria-hidden="true">→</span></a>
+  </div>
+  <p class="meta"><span data-l="my">Android · ဝဘ်အက်ပ် · အခမဲ့ · စမ်းသပ်ကာလ (pilot)</span><span data-l="en">Android · Web app · Free · Pilot</span></p>
+  <ul class="pills">
+    <li><span data-l="my">✈️ အင်တာနက် မလို</span><span data-l="en">✈️ Works offline</span></li>
+    <li><span data-l="my">🆓 အက်ပ် အပြည့်အစုံ အခမဲ့</span><span data-l="en">🆓 Full app, free</span></li>
+    <li><span data-l="my">🔒 စာဝှက်ထားသော ဒေတာ</span><span data-l="en">🔒 Encrypted data</span></li>
+    <li><span data-l="my">🇲🇲 မြန်မာ ဦးစားပေး</span><span data-l="en">🇲🇲 Myanmar-first</span></li>
+  </ul>
+</section>
+
+<section class="card" id="get">
+  <span class="eyebrow"><span data-l="my">ရယူရန်</span><span data-l="en">Get the app</span></span>
+  <h2><span data-l="my">ApexBOS ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS</span></h2>
+  <div class="split">
+  <div>
   <div class="plats">
     <p class="muted"><span data-l="my">ယခု ဒေါင်းလုဒ်ရနိုင်</span><span data-l="en">Available now</span></p>
     <div class="prow"><div class="plat on"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg><span>Android</span></div></div>
@@ -111,6 +192,8 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <a class="dl" id="download" href="https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.34/ApexBOS-0.2.34-release.apk" download><span aria-hidden="true">⬇</span> <span data-l="my">ApexBOS 0.2.34 ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS 0.2.34</span></a>
   <p class="muted"><span data-l="my">ဖိုင်: </span><span data-l="en">File: </span>ApexBOS-0.2.34-release.apk · Android 6.0+</p>
   <p class="badge"><span data-l="my">စမ်းသပ်ကာလ (pilot) — production အတွက် မဟုတ်သေးပါ။ စက်များကြား ပစ္စည်းလွှဲပြောင်းခြင်း၊ ထုတ်လုပ်မှုနှင့် ပို့ဆောင်ရေး အော်ဒါများကို Sync လုပ်ခြင်း မလုံခြုံသေးပါ။ လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို တစ်ပြိုင်နက် update လုပ်ပါ။</span><span data-l="en">Cautious pilot, not production — transfers, production and delivery orders across devices are not yet safe. Update all devices of a business together.</span></p>
+  </div>
+  <div>
   <h2 id="web"><span data-l="my">ဝဘ်အက်ပ်</span><span data-l="en">Web app</span></h2>
   <p class="muted"><span data-l="my">ဘရောက်ဇာထဲတွင် ဖွင့်ပါ — ဒေါင်းလုဒ် မလိုပါ။</span><span data-l="en">Opens in your browser — nothing to download.</span></p>
   <a class="dl web" href="https://apexbos-app.pages.dev" rel="noopener"><span aria-hidden="true">🌐</span> <span data-l="my">ဝဘ်အက်ပ် ဖွင့်မည်</span><span data-l="en">Open web app</span></a>
@@ -151,11 +234,15 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
     </ul>
     <p class="muted"><span data-l="my">စမ်းသုံးရန်၊ back‑office မျက်နှာပြင်အတွက်၊ သို့မဟုတ် Android အက်ပ် ရှိပြီးသား ဆိုင်တွင် ဒုတိယစက် ချိတ်ရန် သင့်တော်သည်။ ဆိုင်၏ အမြဲဖွင့် hub အတွက် Android အက်ပ်ကို သုံးပါ။</span><span data-l="en">Good for trying ApexBOS, a back‑office screen, or a second device joining a shop that already runs the Android app. Use the Android app for the shop's always‑on hub.</span></p>
   </details>
+  </div>
+  </div>
+  <div class="note">
   <p><span data-l="my">ထည့်သွင်းပြီးသား ဖုန်းများတွင် အက်ပ်ထဲမှ ဆက်တင် → အကြောင်း → အက်ပ် အပ်ဒိတ် → <b>အဆင့်မြှင့်မှု စစ်မည်</b> ကိုလည်း နှိပ်နိုင်ပါသည်။</span><span data-l="en">On phones that already have ApexBOS you can also open Settings → About → App updates → <b>Check for updates</b>.</span></p>
   <p><a href="#how"><span data-l="my">အလုပ်လုပ်ပုံနှင့် ဈေးနှုန်း →</span><span data-l="en">How it works &amp; pricing →</span></a></p>
+  </div>
 </section>
 
-<section class="warn">
+<section class="card warn" id="before">
   <h2><span data-l="my">အပ်ဒိတ် မလုပ်မီ</span><span data-l="en">Before you update</span></h2>
   <ul>
     <li><span data-l="my"><b>Backup အရင်လုပ်ပါ</b> — ဆက်တင် → Backup။ ဖိုင်ကို ဖုန်းအပြင် (Drive, USB…) တွင်လည်း သိမ်းထားပါ။</span><span data-l="en"><b>Make a Backup first</b> — Settings → Backup. Keep a copy off the phone too (Drive, USB…).</span></li>
@@ -163,7 +250,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   </ul>
 </section>
 
-<section>
+<section class="card" id="install">
   <h2><span data-l="my">ထည့်သွင်းနည်း</span><span data-l="en">How to install</span></h2>
   <ol>
     <li><span data-l="my">အပေါ်က ခလုတ်ဖြင့် APK ကို ဒေါင်းလုဒ်လုပ်ပါ။</span><span data-l="en">Download the APK with the button above.</span></li>
@@ -173,7 +260,8 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   </ol>
 </section>
 
-<section id="how">
+<section class="card" id="how">
+  <span class="eyebrow"><span data-l="my">အလုပ်လုပ်ပုံ</span><span data-l="en">How it works</span></span>
   <h2><span data-l="my">အခမဲ့ — အက်ပ် အပြည့်အစုံ</span><span data-l="en">Free — the full app</span><span class="tag free" data-l="my">အခမဲ့</span><span class="tag free" data-l="en">FREE</span></h2>
   <p><span data-l="my">အက်ပ်၊ module အားလုံးနှင့် ဒေတာ အားလုံး သင့်စက်ထဲမှာ ရှိပြီး <b>အခမဲ့</b> ဖြစ်ပါသည်။</span><span data-l="en">The app, every module and all your data live on your devices, <b>free</b>.</span></p>
   <div class="dg"><div class="row">
@@ -252,7 +340,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
 
 </section>
 
-<section id="relay">
+<section class="card" id="relay">
   <h2><span data-l="my">လုံခြုံသော Relay — ရွေးချယ်နိုင်</span><span data-l="en">Secured relay — optional</span><span class="tag paid" data-l="my">ငွေပေးရ</span><span class="tag paid" data-l="en">PAID</span></h2>
   <div class="dg relay" id="relay-dg">
     <button type="button" class="switch" id="relay-sw" role="switch" aria-checked="false"><span class="knob" aria-hidden="true"></span><span data-l="my">Relay</span><span data-l="en">Relay</span> <b class="st-off" data-l="my">ပိတ်</b><b class="st-off" data-l="en">Off</b><b class="st-on" data-l="my">ဖွင့်</b><b class="st-on" data-l="en">On</b></button>
@@ -267,10 +355,11 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <p class="muted"><span data-l="my">ပိတ်လိုက်လျှင် သို့မဟုတ် သက်တမ်းကုန်လျှင်လည်း အက်ပ်နှင့် Wi‑Fi Sync ဆက်အလုပ်လုပ်ပါသည်။</span><span data-l="en">Turn it off, or let it lapse, and the app and Wi‑Fi sync keep working.</span> <span class="nojs-hide st-off"><span data-l="my">ဈေးနှုန်းများ ကြည့်ရန် Relay ကို ဖွင့်ပါ။</span><span data-l="en">Switch the relay on to see prices.</span></span></p>
 </section>
 
-<section id="plans" class="paid">
+<section id="plans" class="card paid">
   <h2><span data-l="my">အစီအစဉ်များနှင့် ဈေးနှုန်း</span><span data-l="en">Plans &amp; pricing</span></h2>
   <p class="badge"><span data-l="my">စမ်းသပ်ကာလ ဈေးနှုန်း — ပြောင်းလဲနိုင်ပါသည်</span><span data-l="en">Pilot prices — may change</span></p>
 
+  <div class="plans-grid">
   <div class="plan">
     <h3>Free</h3>
     <p class="price">0 <span data-l="my">ကျပ်</span><span data-l="en">Ks</span></p>
@@ -313,10 +402,11 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
       <li><span data-l="my">Inbox webhook ပါ</span><span data-l="en">Inbox webhooks included</span></li>
     </ul>
   </div>
+  </div>
   <p class="muted"><span data-l="my">ပိုက်ဆံပေး အစီအစဉ်များတွင် ကြော်ငြာ နည်းပါသည် — ကြော်ငြာနေရာ အများစုကို ပိတ်ထားပြီး ပိုင်ရှင်က အနည်းငယ်ကိုသာ ဖွင့်ရန် ရွေးနိုင်ပါသည်။</span><span data-l="en">Paid plans show fewer ads: most ad spots are off, and owners can opt in to a few.</span></p>
 </section>
 
-<section id="pay" class="paid">
+<section id="pay" class="card paid">
   <h2><span data-l="my">ငွေပေးချေနည်း</span><span data-l="en">How to pay</span></h2>
   <p class="badge"><span data-l="my">စမ်းသပ်ကာလ — လက်ဖြင့် အတည်ပြုပါသည်</span><span data-l="en">Pilot — approved by hand</span></p>
   <p><span data-l="my">KBZPay၊ WavePay သို့မဟုတ် ဘဏ်လွှဲဖြင့် ပေးနိုင်ပါသည်။</span><span data-l="en">Pay by KBZPay, WavePay or bank transfer.</span></p>
@@ -330,7 +420,7 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <p class="muted"><span data-l="my">Key ကို စာတို သို့မဟုတ် QR ဖြင့်လည်း ပို့နိုင်ပြီး <b>Advanced</b> တွင် ကူးထည့်နိုင်ပါသည်။ သက်တမ်းတိုးခြင်းလည်း ဤနည်းအတိုင်း ဖြစ်ပါသည်။</span><span data-l="en">A key can also be sent by text or QR and pasted under <b>Advanced</b>. Renewal works the same way.</span></p>
 </section>
 
-<section>
+<section class="card" id="verify">
   <h2><span data-l="my">ဖိုင် စစ်ဆေးရန် (မဖြစ်မနေ မဟုတ်)</span><span data-l="en">Check the file (optional)</span></h2>
   <p class="muted">SHA-256 (APK)</p>
   <code class="hash">bb107dbea8eed3485d77d848d6fb0f8333488434031c8a3b6da4d1099f233d76</code>
@@ -339,11 +429,170 @@ html:not([lang="en"]) [data-l="en"],html[lang="en"] [data-l="my"]{display:none!i
   <p class="muted"><span data-l="my">Android သည် အက်ပ်ဟောင်းနှင့် လက်မှတ် တူမှသာ အပ်ဒိတ်ကို လက်ခံပါသည်။</span><span data-l="en">Android only accepts an update signed with the same certificate as the installed app.</span></p>
 </section>
 
-<footer>
-  <p><a href="https://github.com/ApexBOS/apexbos.github.io/releases"><span data-l="my">ဗားရှင်းအားလုံး</span><span data-l="en">All versions</span></a> · <a href="update-manifest.json">update-manifest.json</a></p>
-  <p>ApexBOS · versionCode 223</p>
-</footer>
+<section class="card" id="features">
+  <span class="eyebrow"><span data-l="my">လုပ်ဆောင်ချက်များ</span><span data-l="en">Features</span></span>
+  <h2><span data-l="my">ApexBOS လုပ်ဆောင်နိုင်သမျှ</span><span data-l="en">Everything ApexBOS does</span></h2>
+  <p><span data-l="my">ဆိုင်တစ်ဆိုင် လည်ပတ်ရန် လိုသမျှကို app တစ်ခုတည်းတွင် စုထားပါသည်။ ဒေတာ အားလုံး သင့်စက်ထဲမှာ ရှိပြီး အင်တာနက် မရှိလည်း ဆက်ရောင်းနိုင်ပါသည်။ module များကို ဆိုင်ခွဲတစ်ခုချင်းအလိုက် ဆက်တင် → Modules တွင် ဖွင့်/ပိတ် လုပ်နိုင်ပြီး မီနူးနှင့် Sell မျက်နှာပြင်သည် လုပ်ငန်းအမျိုးအစားအလိုက် ပြောင်းလဲပါသည်။</span><span data-l="en">Everything a shop needs to run, in one app. All data stays on your devices, and you keep selling with no internet. Modules are switched on or off per branch in Settings → Modules, and the menu and Sell screen adapt to each business type.</span></p>
+
+  <div class="fgrid">
+    <div class="fg">
+      <h3><i aria-hidden="true">🧾</i><span data-l="my">ရောင်းချမှု (POS) နှင့် ငွေကောင်တာ</span><span data-l="en">Selling (POS) &amp; registers</span></h3>
+      <ul>
+        <li><span data-l="my">ငွေသား၊ ကတ်၊ ခွဲပေးချေမှု၊ mobile wallet နှင့် MMQR ဖြင့် အမြန် ရှင်းနိုင်</span><span data-l="en">Fast checkout with cash, card, split payment, mobile wallets and MMQR</span></li>
+        <li><span data-l="my">လက်လီ / လက်ကား ဈေးနှုန်းအဆင့်များ၊ ခေတ္တထားသော cart များ၊ ငွေသွင်း / ငွေထုတ်</span><span data-l="en">Retail and wholesale price tiers, parked carts, cash in / cash out</span></li>
+        <li><span data-l="my">လျှော့ဈေး၊ ပယ်ဖျက်ခြင်း (void) နှင့် ပြန်အမ်းခြင်းကို manager ခွင့်ပြုချက်ဖြင့်သာ — ပြန်အမ်းငွေ အချိုးကျ တိတိကျကျ</span><span data-l="en">Discounts, voids and returns with manager approval — exact proportional refunds</span></li>
+        <li><span data-l="my">ငွေကောင်တာ shift များ၊ X‑report နှင့် ပြင်၍မရသော Z‑report</span><span data-l="en">Register shifts with X‑reports and sealed, unchangeable Z‑reports</span></li>
+        <li><span data-l="my">ငွေကောင်တာတစ်ခုချင်း ကွက်လပ်မရှိ ပြေစာနံပါတ် (ရောင်းချမှု၊ ပြန်အမ်း၊ void၊ Z‑report) — နံပါတ် ပြန်မသုံးပါ</span><span data-l="en">Gapless receipt numbering per register for sales, refunds, voids and Z‑reports — numbers are never reused</span></li>
+        <li><span data-l="my">ငွေပမာဏများကို ကိန်းပြည့်ဖြင့်သာ တွက် — ပြားတစ်ပြားမျှ မလွဲ</span><span data-l="en">Money kept in whole units only, so totals never drift</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">📦</i><span data-l="my">ကုန်ပစ္စည်း၊ စတော့နှင့် အဝယ်</span><span data-l="en">Products, stock &amp; purchasing</span></h3>
+      <ul>
+        <li><span data-l="my">ကုန်ပစ္စည်းစာရင်း — အရွယ်/အရောင် ကွဲပြားမှု (variants)၊ barcode / SKU၊ ယူနစ်များ (ပိဿာ၊ ကျပ်သား ပါ)</span><span data-l="en">Catalog with size/colour variants, barcodes / SKUs and units (including viss and tical)</span></li>
+        <li><span data-l="my">ပြင်၍မရသော စတော့ မှတ်တမ်း၊ စတော့ စစ်ဆေးရေတွက်ခြင်း၊ စတော့နည်း သတိပေးချက်</span><span data-l="en">Unchangeable stock ledger, stock counts and low‑stock alerts</span></li>
+        <li><span data-l="my">ဂိုဒေါင်နှင့် နေရာများ၊ နေရာ / ဆိုင်ခွဲ ကြား ပစ္စည်းလွှဲပြောင်းခြင်း</span><span data-l="en">Warehouses and locations, transfers between locations and branches</span></li>
+        <li><span data-l="my">ကုန်ပေးသူများ၊ အဝယ်အော်ဒါ (PO) နှင့် ပစ္စည်းလက်ခံခြင်း</span><span data-l="en">Suppliers, purchase orders and receiving</span></li>
+        <li><span data-l="my">ရောင်းအား မြန်/နှေး၊ မရောင်းရသော ပစ္စည်း၊ အမျိုးအစားအလိုက် အမြတ်</span><span data-l="en">Category velocity, dead stock and gross margin by category</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">👥</i><span data-l="my">ဖောက်သည်များနှင့် အော်ဒါများ</span><span data-l="en">Customers &amp; orders</span></h3>
+      <ul>
+        <li><span data-l="my">ဖောက်သည် စာရင်းနှင့် loyalty (အမှတ်၊ သုံးစွဲငွေ၊ လာရောက်မှု)</span><span data-l="en">Customers and loyalty (points, spend, visits)</span></li>
+        <li><span data-l="my">အကြွေးရောင်းခြင်း — အကြွေးကန့်သတ်ချက်ဖြင့်</span><span data-l="en">Sales on account with credit limits</span></li>
+        <li><span data-l="my">အော်ဒါ မှတ်တမ်းနှင့် ပြေစာ ပြန်ထုတ်ခြင်း</span><span data-l="en">Order history and receipt reprints</span></li>
+        <li><span data-l="my">ချိန်းဆိုမှု (appointments)</span><span data-l="en">Appointments</span></li>
+        <li><span data-l="my">ဖောက်သည် chat Inbox — Telegram၊ Messenger၊ Viber၊ TikTok ကို ဖောက်သည်၊ ရောင်းချမှု၊ ပို့ဆောင်မှုနှင့် ချိတ် (ရွေးချယ်နိုင်၊ Telegram မှအပ Relay လို)</span><span data-l="en">Customer chat inbox — Telegram, Messenger, Viber and TikTok linked to customers, sales and deliveries (optional; all but Telegram need the relay)</span><span class="tag soon">pilot</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🏪</i><span data-l="my">လုပ်ငန်းအမျိုးအစားအလိုက်</span><span data-l="en">Built for your trade</span></h3>
+      <ul>
+        <li><span data-l="my"><b>စားသောက်ဆိုင် / ကော်ဖီဆိုင်</b> — မီးဖိုချောင် ticket မျက်နှာပြင်၊ modifier များ၊ စားပွဲ နံပါတ်</span><span data-l="en"><b>Restaurant / café</b> — kitchen ticket screen, modifiers, table numbers</span></li>
+        <li><span data-l="my"><b>ဆေးဆိုင်</b> — batch နှင့် သက်တမ်းကုန်ရက် (FEFO — အရင်ကုန်မည့်ဟာ အရင်ရောင်း)၊ ဆေးညွှန်း အတည်ပြုခြင်း</span><span data-l="en"><b>Pharmacy</b> — batches and expiry dates sold first‑expiry‑first‑out (FEFO), prescription confirmation</span></li>
+        <li><span data-l="my"><b>အီလက်ထရောနစ်</b> — serial နံပါတ်နှင့် အာမခံ</span><span data-l="en"><b>Electronics</b> — serial numbers and warranties</span></li>
+        <li><span data-l="my"><b>အထည်ဆိုင်</b> — အရွယ်/အရောင် variants</span><span data-l="en"><b>Clothing</b> — size and colour variants</span></li>
+        <li><span data-l="my"><b>ကုန်စုံဆိုင်</b> — ပိဿာ / ကျပ်သား ယူနစ်</span><span data-l="en"><b>Grocery</b> — viss / tical units</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🛵</i><span data-l="my">ပို့ဆောင်ရေး</span><span data-l="en">Delivery &amp; riders</span><span class="tag soon">pilot</span></h3>
+      <ul>
+        <li><span data-l="my">ကိုယ်ပိုင် rider များ သို့မဟုတ် ပို့ဆောင်ရေးကုမ္ပဏီ — ရောင်းချချိန်တွင် delivery ဖွင့်ရုံ</span><span data-l="en">Own riders or a delivery company — just switch on delivery at checkout</span></li>
+        <li><span data-l="my">Dispatch၊ rider ၏ "ကျွန်ုပ်၏ အလုပ်များ"၊ အခြေအနေ အဆင့်ဆင့် မှတ်တမ်း</span><span data-l="en">Dispatch, riders' "My jobs" and a full status history</span></li>
+        <li><span data-l="my">ရန်ကုန်၊ မန္တလေး မြို့နယ်အလိုက် ဇုန်နှင့် ပို့ခ (ပြင်ဆင်နိုင်)</span><span data-l="en">Zones and fees by township, with Yangon and Mandalay presets you can edit</span></li>
+        <li><span data-l="my">ငွေချေပို့ (COD) ငွေ အပ်နှံမှုနှင့် ပို့ဆောင်ရေး အစီရင်ခံစာ</span><span data-l="en">Cash‑on‑delivery hand‑ins and delivery reports</span></li>
+        <li><span data-l="my">ပို့ဆောင်ရေး လုပ်ငန်းများအတွက် merchant client အော်ဒါများ</span><span data-l="en">Merchant‑client orders for delivery services</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🏭</i><span data-l="my">ထုတ်လုပ်ရေး</span><span data-l="en">Manufacturing</span><span class="tag soon">pilot</span></h3>
+      <ul>
+        <li><span data-l="my">မုန့်တိုက်၊ အထည်ချုပ်၊ လက်ဖက်/ငရုတ်ဆီ ကဲ့သို့ အစားအစာ၊ ပရိဘောဂ၊ သနပ်ခါး/ဆပ်ပြာ ထုတ်လုပ်သူ အသေးစားများအတွက်</span><span data-l="en">For small makers: bakeries, tailors, food processing (pickled tea, chilli paste), furniture, thanaka and soap</span></li>
+        <li><span data-l="my">ကုန်ကြမ်းများ (မရောင်းသော ပစ္စည်း)၊ ချက်နည်း / ပါဝင်ပစ္စည်းစာရင်း (BOM)</span><span data-l="en">Raw materials (never sold) and recipes / bills of materials</span></li>
+        <li><span data-l="my">ထုတ်လုပ်မှု အော်ဒါ၊ ကုန်ကျစရိတ် တွက်ချက်ခြင်း၊ ထုတ်လုပ်မှု lot များ</span><span data-l="en">Production orders, cost roll‑up and production lots</span></li>
+        <li><span data-l="my">"ယခု ဘယ်လောက် ထုတ်နိုင်သလဲ" နှင့် ဝယ်ရန် ကုန်ကြမ်း စာရင်း</span><span data-l="en">"What can I make now" and what to buy for planned orders</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">📒</i><span data-l="my">စာရင်းကိုင်</span><span data-l="en">Accounting</span></h3>
+      <ul>
+        <li><span data-l="my">module တိုင်းမှ အလိုအလျောက် ဝင်သော double‑entry စာရင်း (IFRS for SMEs၊ မြန်မာ ကုန်သွယ်လုပ်ငန်းခွန်)</span><span data-l="en">Double‑entry books filled automatically by every module (IFRS for SMEs, Myanmar Commercial Tax)</span></li>
+        <li><span data-l="my">အရှုံးအမြတ်၊ လက်ကျန်ရှင်းတမ်း၊ ငွေသားစီးဆင်းမှု၊ trial balance၊ general ledger၊ day book၊ ကုန်သွယ်ခွန် အနှစ်ချုပ်</span><span data-l="en">Profit &amp; loss, balance sheet, cash flow, trial balance, general ledger, day book, commercial tax summary</span></li>
+        <li><span data-l="my">ရရန်ငွေ / ပေးရန်ငွေ (သက်တမ်းအလိုက်)၊ ပုံသေပိုင်ပစ္စည်းနှင့် တန်ဖိုးလျော့၊ ဘတ်ဂျက် နှိုင်းယှဉ်</span><span data-l="en">Receivables and payables with aging, fixed assets with depreciation, budget vs actual</span></li>
+        <li><span data-l="my">ဆိုင်ခွဲများ ပေါင်းစုံ အစီရင်ခံစာ၊ CSV နှင့် Print / PDF ထုတ်ယူခြင်း</span><span data-l="en">Consolidated reports across branches, CSV and print / PDF export</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🧑‍💼</i><span data-l="my">ဝန်ထမ်း၊ HR နှင့် ခွင့်ပြုချက်</span><span data-l="en">Staff, HR &amp; approvals</span></h3>
+      <ul>
+        <li><span data-l="my">ရာထူး (role) များ — ငွေကိုင်၊ manager၊ ပိုင်ရှင်၊ စာရင်းကိုင်၊ မီးဖိုချောင်၊ rider စသည်၊ ကိုယ်ပိုင် role ဖန်တီးနိုင်</span><span data-l="en">Roles such as cashier, manager, owner, accountant, kitchen and rider — or create your own</span></li>
+        <li><span data-l="my">ဝန်ထမ်းတိုင်း ကိုယ်ပိုင် PIN၊ ဆိုင်ခွဲအလိုက် ဝင်ခွင့်၊ manager ခွင့်ပြုချက် စာမျက်နှာ</span><span data-l="en">Own PIN per person, per‑branch access and a manager approvals screen</span></li>
+        <li><span data-l="my">ရုံးတက်/ဆင်း မှတ်တမ်း (attendance)</span><span data-l="en">Attendance with clock in / clock out</span></li>
+        <li><span data-l="my">လစာ — လစဉ်/နာရီ၊ အချိန်ပို၊ လူမှုဖူလုံရေး (SSB)၊ ဝင်ငွေခွန် နုတ်ယူခြင်း၊ မြန်မာ လစာစလစ်</span><span data-l="en">Payroll — monthly or hourly, overtime, SSB, income‑tax withholding, Burmese payslips</span></li>
+        <li><span data-l="my">အရေးကြီး လုပ်ဆောင်ချက်တိုင်းကို audit log တွင် မှတ်တမ်းတင်</span><span data-l="en">Every privileged action recorded in the audit log</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🏢</i><span data-l="my">ဆိုင်ခွဲများနှင့် လုပ်ငန်းများစွာ</span><span data-l="en">Branches &amp; businesses</span></h3>
+      <ul>
+        <li><span data-l="my">ဆိုင်ခွဲများစွာ — ကုန်ပစ္စည်းနှင့် အစီရင်ခံစာ မျှသုံး၊ ခေါင်းစီးမှ ဆိုင်ခွဲ ပြောင်းရုံ</span><span data-l="en">Many branches sharing products and reports — switch from the header</span></li>
+        <li><span data-l="my">စက်တစ်လုံးတည်းတွင် လုပ်ငန်း အများအပြား</span><span data-l="en">Several businesses on one device</span></li>
+        <li><span data-l="my">လူတစ်ဦးချင်းအလိုက် dashboard နှင့် အသိပေးချက်များ</span><span data-l="en">A personal dashboard and notifications for each person</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🔐</i><span data-l="my">Sync နှင့် လုံခြုံရေး</span><span data-l="en">Sync &amp; security</span></h3>
+      <ul>
+        <li><span data-l="my">ဆာဗာ မလို — Wi‑Fi/LAN၊ Bluetooth၊ ဖိုင် / USB ဖြင့် စက်အချင်းချင်း Sync</span><span data-l="en">Device‑to‑device Sync over Wi‑Fi/LAN, Bluetooth or file / USB — no server needed</span></li>
+        <li><span data-l="my">QR နှင့် ကုဒ် ၆ လုံးဖြင့် စက်ချိတ်၊ စက်တစ်လုံးချင်း ရွေးချယ် Sync</span><span data-l="en">QR pairing with a 6‑digit check, and selective Sync per device</span></li>
+        <li><span data-l="my">ဒေတာဘေ့စ် တစ်ခုလုံး စာဝှက် (SQLCipher)၊ သော့ကို Keystore / Keychain တွင် သိမ်း</span><span data-l="en">Whole database encrypted (SQLCipher), key kept in the Keystore / Keychain</span></li>
+        <li><span data-l="my">စက်ကြား AES‑256 အစမှအဆုံး စာဝှက်၊ ပြောင်းလဲမှုတိုင်း လက်မှတ်ထိုး</span><span data-l="en">AES‑256 end‑to‑end encryption between devices, every change signed</span></li>
+        <li><span data-l="my">PIN များကို PBKDF2‑SHA256 ဖြင့် hash၊ မှားလျှင် ပိတ်</span><span data-l="en">PINs hashed with PBKDF2‑SHA256, lockout after wrong tries</span></li>
+        <li><span data-l="my">စကားဝှက်ဖြင့် စာဝှက်ထားသော Backup (AES‑256‑GCM) နှင့် ဘေးကင်းစွာ ပြန်ယူခြင်း</span><span data-l="en">Passphrase‑encrypted backups (AES‑256‑GCM) with safe all‑or‑nothing restore</span></li>
+        <li><span data-l="my">ရွေးချယ်နိုင်သော Relay — နေရာမတူ၊ အချိန်မတူလည်း Sync</span><span data-l="en">Optional relay to Sync from anywhere, anytime</span> <a href="#relay">→</a></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🖨️</i><span data-l="my">Hardware</span><span data-l="en">Hardware</span></h3>
+      <ul>
+        <li><span data-l="my">ESC/POS ပြေစာ ပရင်တာ — USB၊ Bluetooth၊ Serial၊ network (ကွန်ပျူတာ)၊ 58 / 80 mm</span><span data-l="en">ESC/POS receipt printers over USB, Bluetooth, serial or network (desktop), 58 / 80 mm</span></li>
+        <li><span data-l="my">မြန်မာစာ ပြေစာကို ပုံအဖြစ် ထုတ်သဖြင့် စာလုံး မပျက်၊ ရောင်းပြီးတိုင်း အလိုအလျောက် ထုတ်</span><span data-l="en">Myanmar receipts printed as images so the script stays correct, auto‑print after each sale</span></li>
+        <li><span data-l="my">ပရင်တာမှတဆင့် ငွေအံဆွဲ ဖွင့်ခြင်း</span><span data-l="en">Cash drawer opened through the printer</span></li>
+        <li><span data-l="my">USB / Bluetooth barcode scanner နှင့် ကင်မရာဖြင့် စကန်</span><span data-l="en">USB / Bluetooth barcode scanners and camera scanning</span></li>
+        <li><span data-l="my">ပရင်တာ မရှိလျှင် ဘရောက်ဇာ print ဖြင့် ထုတ်</span><span data-l="en">Browser print view when no printer is paired</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">✨</i><span data-l="my">AI လက်ထောက်</span><span data-l="en">AI assistant</span><span class="tag soon">pilot</span></h3>
+      <ul>
+        <li><span data-l="my">ဆိုင်အကြောင်း မေးခွန်းများကို မြန်မာလို ဖြေ — ရောင်းအား၊ စတော့နည်း၊ ဖောက်သည်၊ ပို့ဆောင်မှု</span><span data-l="en">Answers questions about your shop in Burmese — sales, low stock, customers, deliveries</span></li>
+        <li><span data-l="my">ပြောင်းလဲမှုများကို ခွင့်ပြုချက်ကတ် အဖြစ် ပြင်ဆင်ပေး — PIN ဖြင့် အတည်ပြုမှသာ</span><span data-l="en">Prepares changes as approval cards that need a PIN</span></li>
+        <li><span data-l="my">ကိုယ်ပိုင် key ဖြင့် — OpenAI၊ Anthropic၊ Gemini၊ OpenRouter သို့မဟုတ် Ollama၊ ရွေးချယ်နိုင်ပြီး မူလ ပိတ်ထား</span><span data-l="en">Bring your own key — OpenAI, Anthropic, Gemini, OpenRouter or Ollama; optional and off by default</span></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h3><i aria-hidden="true">🇲🇲</i><span data-l="my">မြန်မာ ဦးစားပေး</span><span data-l="en">Made for Myanmar</span></h3>
+      <ul>
+        <li><span data-l="my">မြန်မာ မူလ၊ English သို့ ပြောင်းနိုင်၊ မြန်မာ ဂဏန်းဖြင့် ငွေပမာဏ၊ ကျပ် (MMK) နှင့် USD</span><span data-l="en">Burmese by default with an English toggle, Myanmar digits for amounts, MMK and USD</span></li>
+        <li><span data-l="my">အလင်း / အမှောင် theme၊ ဖုန်း၊ tablet၊ ကွန်ပျူတာ အားလုံးတွင် သုံးရလွယ်</span><span data-l="en">Light / dark themes, easy on phone, tablet and computer</span></li>
+        <li><span data-l="my">ကြော်ငြာများ — tracking မရှိ၊ ငွေရှင်းချိန်တွင် ဘယ်တော့မှ မပြ</span><span data-l="en">House ads with no tracking, never shown during checkout</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3><span data-l="my">Demo ဒေတာဖြင့် စမ်းကြည့်ပါ</span><span data-l="en">Try it with demo data</span></h3>
+  <p class="muted"><span data-l="my">သီးခြား demo workspace တွင် လုပ်ငန်းအမျိုးအစား ရွေးပြီး စမ်းနိုင်ပါသည် — သင့် လုပ်ငန်း ဒေတာနှင့် မရောပါ။</span><span data-l="en">Pick a shop type in a separate demo workspace — it never mixes with your business data.</span></p>
+  <ul class="types">
+    <li><span data-l="my">အထည်ဆိုင်</span><span data-l="en">Clothing</span></li>
+    <li><span data-l="my">အီလက်ထရောနစ်</span><span data-l="en">Electronics</span></li>
+    <li><span data-l="my">ဆေးဆိုင်</span><span data-l="en">Pharmacy</span></li>
+    <li><span data-l="my">စားသောက်ဆိုင်</span><span data-l="en">Restaurant</span></li>
+    <li><span data-l="my">ကော်ဖီဆိုင်</span><span data-l="en">Café</span></li>
+    <li><span data-l="my">မုန့်တိုက်</span><span data-l="en">Bakery</span></li>
+    <li><span data-l="my">ကုန်စုံဆိုင်</span><span data-l="en">Grocery</span></li>
+    <li><span data-l="my">ပို့ဆောင်ရေး</span><span data-l="en">Delivery service</span></li>
+    <li><span data-l="my">ထုတ်လုပ်သူ အသေးစား</span><span data-l="en">Small manufacturer</span></li>
+    <li><span data-l="my">ဆိုင်ခွဲများစွာ</span><span data-l="en">Multi-store</span></li>
+  </ul>
+
+  <p class="badge"><span data-l="my">စမ်းသပ်ကာလ (pilot) — "pilot" ဟု ပြထားသော လုပ်ဆောင်ချက်များနှင့် အချို့ အပိုင်းများကို စက်အစစ် သို့မဟုတ် live ဝန်ဆောင်မှုများတွင် အပြည့်အဝ မစမ်းရသေးပါ။</span><span data-l="en">Pilot — features marked "pilot", and some others, are not yet fully proven on real devices or live services.</span></p>
+  <div class="endcta"><a class="btn primary" href="#get"><span aria-hidden="true">⬇</span> <span data-l="my">ApexBOS ဒေါင်းလုဒ်</span><span data-l="en">Download ApexBOS</span></a></div>
+</section>
+
+</div>
 </main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2><span data-l="my">ဆက်သွယ်ရန်</span><span data-l="en">Contact</span></h2>
+    <p><span data-l="my">မေးခွန်း၊ အကြံပြုချက် သို့မဟုတ် အကူအညီ လိုလျှင် email ပို့ပါ။</span><span data-l="en">Questions, feedback or need help? Email us.</span></p>
+    <a class="mail" href="mailto:apexbosofficial@gmail.com"><span aria-hidden="true">✉</span> apexbosofficial@gmail.com</a>
+    <p class="links"><a href="https://github.com/ApexBOS/apexbos.github.io/releases"><span data-l="my">ဗားရှင်းအားလုံး</span><span data-l="en">All versions</span></a> · <a href="update-manifest.json">update-manifest.json</a> · <a href="#top"><span data-l="my">အပေါ်သို့ ↑</span><span data-l="en">Back to top ↑</span></a></p>
+    <p>ApexBOS · versionCode 223</p>
+  </div>
+</footer>
 <script>
 (function(){var h=document.documentElement,k='apexbos-site-lang';try{var s=localStorage.getItem(k);if(s==='en'||s==='my')h.lang=s}catch(e){}
 document.getElementById('lang').addEventListener('click',function(){h.lang=h.lang==='en'?'my':'en';try{localStorage.setItem(k,h.lang)}catch(e){}});})();
