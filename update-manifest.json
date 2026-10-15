@@ -1,19 +1,19 @@
 {
-  "version": "0.2.23",
-  "publishedAt": "2026-10-12T15:28:01Z",
+  "version": "0.2.34",
+  "publishedAt": "2026-10-15T17:00:00Z",
   "notes": {
-    "en": "- The opening cash of a shift now comes from the safe: when a shift opens, its opening cash is taken from *Cash in safe / petty cash*, and when it closes the counted cash goes back there (a shortage or overage is still recorded). Only shifts opened after this update work this way — a shift that was already open when you updated closes exactly as before, so nothing is counted twice.\n- Owners see Cash on hand on the Dashboard: all the cash the business has now, what is in the safe and what is in each drawer, in plain words. The first time it asks How much cash did the business start with? (saved as money the owner put in). Not now hides the question; you can add or change the starting cash later — the earlier record stays and only the difference is added.\n- Books health: the cash drawer drill-down now reads Cash the till should hold (opening cash included) when every shift on that register took its opening cash from the safe (it said \"no float\", although the amount includes the opening cash). Registers with shifts opened before this update keep the old wording.\n- All devices of a business must update to this version together.",
-    "my": "- အလှည့်၏ အစငွေကို မီးခံသေတ္တာမှ ယူပါပြီ: အလှည့်ဖွင့်လျှင် အစငွေကို *မီးခံသေတ္တာနှင့် လက်ကိုင်ငွေ* မှ ယူပြီး အလှည့်ပိတ်လျှင် ရေတွက်ရသော ငွေကို ထိုနေရာသို့ ပြန်ထည့်ပါသည် (ငွေပို / ငွေလို ကိုလည်း ဆက်မှတ်ပါသည်)။ ဤအပ်ဒိတ်ပြီးနောက် ဖွင့်သော အလှည့်များသာ ဤနည်းဖြင့် အလုပ်လုပ်ပါသည် — အပ်ဒိတ်လုပ်ချိန်တွင် ဖွင့်ထားဆဲ အလှည့်ကို ယခင်အတိုင်း ပိတ်ပါသည်၊ ထို့ကြောင့် နှစ်ခါ မရေတွက်ပါ။\n- ပိုင်ရှင်များ ပင်မစာမျက်နှာ (Dashboard) တွင် လက်ထဲရှိ ငွေသား ကို မြင်ရပါပြီ: လုပ်ငန်းတွင် ယခုရှိသော ငွေသား စုစုပေါင်း၊ မီးခံသေတ္တာထဲရှိ ငွေနှင့် ငွေအံဆွဲတစ်ခုစီထဲရှိ ငွေကို ရိုးရိုး စကားဖြင့် ပြပါသည်။ ပထမဆုံးအကြိမ် လုပ်ငန်း စတင်ချိန်တွင် ငွေသား ဘယ်လောက် ရှိခဲ့သလဲ ဟု မေးပါသည် (ပိုင်ရှင် ထည့်ဝင်ငွေ အဖြစ် သိမ်းပါသည်)။ နောက်မှ ကို နှိပ်လျှင် မေးခွန်းကို ဖျောက်ထားပြီး နောက်ပိုင်း စတင်ငွေကို ထည့် / ပြင် နိုင်ပါသည် — ယခင်မှတ်တမ်း မပြောင်းဘဲ ကွာခြားချက်ကိုသာ ထပ်ထည့်ပါသည်။\n- စာရင်းစာအုပ် ကျန်းမာရေး: ငွေအံဆွဲ အသေးစိတ်တွင် ထိုကောင်တာ၏ အလှည့်အားလုံးက အစငွေကို မီးခံသေတ္တာမှ ယူထားလျှင် ကောင်တာတွင် ရှိသင့်သောငွေ (အစငွေ ပါ) ဟု ပြပါပြီ (ယခင်က ငွေပမာဏတွင် အစငွေ ပါသော်လည်း \"အစငွေ မပါ\" ဟု ပြခဲ့သည်)။ ဤအပ်ဒိတ်မတိုင်မီ ဖွင့်ခဲ့သော အလှည့်ရှိသည့် ကောင်တာများတွင် ယခင်စာသားအတိုင်း ပြပါသည်။\n- လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို ဤဗားရှင်းသို့ အတူတူ အပ်ဒိတ်လုပ်ရပါမည်။"
+    "my": "- လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ\n- စက်နှစ်လုံးတွင် လက်ခံထားသော အဝယ်အော်ဒါက ကုန်လက်ကျန်ကို နှစ်ဆ မတိုးတော့ပါ။\n- ဆိုင်ခရက်ဒစ်နှင့် ပွိုင့်များ ကောင်တာစက်များကြား မပျောက်တော့ပါ။\n- ဆိုင်ရှစ် (shift) ငွေသား စက်များကြား မပျောက်တော့ပါ။\n- ပြန်လက်ခံမှုများ စက်များကြား မပျောက်တော့ပါ။\n- လုပ်ငန်းဒေတာကို ကုဒ်မဝှက်ဘဲ ဘယ်တော့မှ မဖွင့်၊ မသိမ်းပါ။\n- ပြင်ဆင်ချက် — နှစ်ချက်ဆက်နှိပ်လျှင် အရောင်း သို့မဟုတ် လွှဲပြောင်းမှု နှစ်ခါ မှတ်တမ်းဝင်နိုင်ခြင်း\n- ပြင်ဆင်ချက် — လက်ကျန်ရေတွက်မှုက အရောင်းနှင့် ပြင်ဆင်မှုများကို ပျောက်စေနိုင်ခြင်း\n- ပြင်ဆင်ချက် — ဆိုင်ခရက်ဒစ်သို့ ပြန်အမ်းငွေ ဖောက်သည်၏ လက်ကျန်ထဲ မရောက်ခြင်း\n- အဆင့်မြှင့်မှုကို မထည့်သွင်းမီ စစ်ဆေးပါပြီ\n- အခြားစက်တွင် မန်နေဂျာ ခွင့်ပြုချက် တောင်းခြင်း\n- ဆက်တင် → ပွိုင့်စနစ်",
+    "en": "- Update all devices of a business together.\n- A purchase order received on two devices no longer doubles the stock.\n- Store credit and points no longer get lost between tills.\n- Shift cash no longer gets lost between devices.\n- Returns no longer get lost between devices.\n- Business data is never opened or saved without encryption.\n- Fixed: a double tap could record a sale or transfer twice.\n- Fixed: stock counts could lose sales and adjustments.\n- Fixed: refunds to store credit did not reach the customer's balance.\n- Updates are verified before install.\n- Ask a manager on another device.\n- Settings → Loyalty points."
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.23/ApexBOS-0.2.23-release.apk",
-      "sha256": "b45b0057ad440f41136661ddbfe026b28a699439b88b7d6fbf2a31d6bc021dfc"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.34/ApexBOS-0.2.34-release.apk",
+      "sha256": "bb107dbea8eed3485d77d848d6fb0f8333488434031c8a3b6da4d1099f233d76"
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "apex-upd-2026a",
-    "sig": "fY1iF6bmDi2vVWp3vE3sMDjFjygBxBAlMYxqsod99Z1nj-nPcDZgFFml62hAEIw_mDo65x2lEWdx2WrLs3V7AA"
+    "sig": "U_GorkTwwx-hJ9GdEihaa4dnQ7qF1huk-KBKsHDfrn2_Uyb-jBIf8Ihh5ojQ4lmK2JtA2ifwm3WMyBm_yM2NBA"
   }
 }
