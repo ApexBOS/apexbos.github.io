@@ -1,19 +1,19 @@
 {
-  "version": "0.2.35",
-  "publishedAt": "Fri 2026-10-16 01:45 PM (UTC+06:30)",
+  "version": "0.2.36",
+  "publishedAt": "Sat 2026-10-17 03:00 AM (UTC+06:30)",
   "notes": {
-    "my": "- လုပ်ငန်းတစ်ခု၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။ အဆင့်မြှင့်မီ ဖွင့်ထားသော အလှည့်ကို ပိတ်ပါ။\n- ကုန်ပစ္စည်း သို့မဟုတ် ဖောက်သည် တစ်ခုကို စက်နှစ်လုံးမှ ပြင်ထားလျှင် နှစ်ခုလုံး ကျန်ပါသည်။\n- အလှည့်၏ ငွေသားကို အရောင်းများမှ တိုက်ရိုက် တွက်ပါသည်။\n- ဒေတာညှိရာတွင် ကွဲလွဲမှုများကို ဒေတာညှိခြင်းနှင့် စက်များ စာမျက်နှာတွင် ပြပါသည်။\n- အော့ဖ်လိုင်းတွင် စက်နှစ်လုံးမှ ဖွင့်ထားသော ငွေကောင်တာ၏ ငွေသားကို မရောတော့ပါ။\n- ဖုန်းဖြင့် ရောင်းရာတွင် အလှည့် မဖွင့်ရသေးလျှင်လည်း ကုန်ပစ္စည်းများ အပေါ်မှ စပြပါသည်။\n- ဆေးအသုတ် သက်တမ်းကုန်ရက် အရေအတွက် စခရင်တိုင်းတွင် တူညီပါပြီ။\n- Z အစီရင်ခံစာ ပြီးမှ ပိတ်ပြီးသော အလှည့်ထဲ ရောက်လာသော ငွေသားကို ပြပါသည်။\n- အရောင်းမှတ်တမ်း များလာသော်လည်း အော်ဒါများ၊ ပြန်အမ်းများ၊ ဆေးဆိုင်နှင့် အစီရင်ခံစာများ မြန်မြန် ပွင့်ပါသည်။\n- စက်တစ်လုံးကို ဖယ်ရှားလျှင် ဆိုင်၏ ချိတ်ဆက်မှုသော့ကို ပြောင်းပေးပါသည်။\n- စက်နှစ်လုံးတွင် ပို့ / လက်ခံထားသော ပစ္စည်းလွှဲပြောင်းမှုက ကုန်လက်ကျန်ကို နှစ်ကြိမ် မရွှေ့တော့ပါ။\n- စက်နှစ်လုံးတွင် ပြီးဆုံးထားသော ထုတ်လုပ်မှုအော်ဒါက ကုန်ကြမ်းကို နှစ်ကြိမ် မသုံးတော့၊ ကုန်ချောကို နှစ်ကြိမ် မထည့်တော့ပါ။\n- ပို့ဆောင်ပြီးသော အော်ဒါကို အခြားစက်က ပြန်မဖျက်နိုင်တော့ပါ။\n- အတည်ပြုပြီးသော ကုန်လက်ကျန်ရေတွက်မှု သို့မဟုတ် လစာစာရင်းကို အခြားစက်က ပြန်မဖွင့်နိုင်တော့ပါ။",
-    "en": "- Update all devices of a business together. Close any open shift first.\n- Edits of one product or customer on two devices are both kept.\n- Shift cash is worked out from the sales themselves.\n- Sync conflicts are listed on the Sync page.\n- A register opened on two devices while offline no longer mixes up cash.\n- Sell on a phone: products start higher with no open shift.\n- Batch expiry days now match on every screen.\n- Cash that reaches a closed shift after its Z report is shown.\n- Orders, Returns, Pharmacy and Reports open fast with a long sales history.\n- Removing a device now changes the shop's sync key.\n- A stock transfer sent or received on two devices no longer moves the stock twice.\n- A production order completed on two devices no longer uses the components or adds the goods twice.\n- A delivered order is no longer undone by another device.\n- A stock count or a pay run can no longer be re-opened by another device."
+    "my": "- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။\n- ဝန်ထမ်း၊ လစာ၊ ပို့ဆောင်ရေးနှင့် ဆိုင်ဆက်တင်များကို စက်နှစ်လုံးမှ ပြင်ထားလျှင် နှစ်ခုလုံး ကျန်ပါသည်။\n- စက်များစွာက အော့ဖ်လိုင်း ရောင်းလျှင်လည်း အသုတ် အရေအတွက် မှန်ကန်ပါသည်။\n- ဖောက်သည် လက်ကျန်များ စက်တိုင်းတွင် တူညီပါသည်။",
+    "en": "- Update all devices of the shop together.\n- Staff, pay, delivery and shop settings edited on two devices are both kept.\n- Batch quantities stay right when several devices sell offline.\n- Customer balances match on every device."
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.35/ApexBOS-0.2.35-release.apk",
-      "sha256": "184d1b4bf2b02581abf60341a4e277fbf54d8b7431c1e16056741d504767aa33"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.36/ApexBOS-0.2.36-release.apk",
+      "sha256": "ba3d53ca128198e6059cf46b91d0d10f70ec625b4e89ed5798489b3070ad7b7e"
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "apex-upd-2026a",
-    "sig": "48E8G0AqgkA596uxvQt-aStfj20J1fhSnHrtRm_Rmz0HpkPN7q_F957tWhU-cGKRs7_wPZQ0NkP98_yRaZedBw"
+    "sig": "7OnUAII6Nx_IBjKHWcl_ONRhHWqFFutEopj2bHgPLfU6vozqJTNgUBH_A-8wrhg0QtPcFNGtJhbLCjdELjYlAg"
   }
 }
