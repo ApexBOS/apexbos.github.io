@@ -1,19 +1,19 @@
 {
-  "version": "0.2.36",
-  "publishedAt": "Sat 2026-10-17 03:00 AM (UTC+06:30)",
+  "version": "0.2.37",
+  "publishedAt": "Mon 2026-10-19 11:30 AM (UTC+06:30)",
   "notes": {
-    "my": "- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။\n- ဝန်ထမ်း၊ လစာ၊ ပို့ဆောင်ရေးနှင့် ဆိုင်ဆက်တင်များကို စက်နှစ်လုံးမှ ပြင်ထားလျှင် နှစ်ခုလုံး ကျန်ပါသည်။\n- စက်များစွာက အော့ဖ်လိုင်း ရောင်းလျှင်လည်း အသုတ် အရေအတွက် မှန်ကန်ပါသည်။\n- ဖောက်သည် လက်ကျန်များ စက်တိုင်းတွင် တူညီပါသည်။",
-    "en": "- Update all devices of the shop together.\n- Staff, pay, delivery and shop settings edited on two devices are both kept.\n- Batch quantities stay right when several devices sell offline.\n- Customer balances match on every device."
+    "my": "- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။\n- အက်ပ်ကို စက်မည်မျှ အသုံးပြုနေသည်ကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။",
+    "en": "- Update all devices of the shop together.\n- The app now counts how many devices use it, anonymously."
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.36/ApexBOS-0.2.36-release.apk",
-      "sha256": "ba3d53ca128198e6059cf46b91d0d10f70ec625b4e89ed5798489b3070ad7b7e"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.37/ApexBOS-0.2.37-release.apk",
+      "sha256": "8ff5089ac7238f0ea83579112d38a3f32f993376ff09f90e9515f2417bfaa7fc"
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "apex-upd-2026a",
-    "sig": "7OnUAII6Nx_IBjKHWcl_ONRhHWqFFutEopj2bHgPLfU6vozqJTNgUBH_A-8wrhg0QtPcFNGtJhbLCjdELjYlAg"
+    "sig": "IldqPzUcd5q_LEmLoKO3WoB8Sp6SSlFGh9UosWId7yEUueVOPlArP00ROnx0SgcvCvJ8EUhFebiaCpZ9gn6WDw"
   }
 }
