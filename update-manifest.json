@@ -1,19 +1,19 @@
 {
-  "version": "0.2.37",
-  "publishedAt": "Mon 2026-10-19 11:30 AM (UTC+06:30)",
+  "version": "0.2.39",
+  "publishedAt": "2026-11-22T11:30:00+06:30",
   "notes": {
-    "my": "- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။\n- အက်ပ်ကို စက်မည်မျှ အသုံးပြုနေသည်ကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။",
-    "en": "- Update all devices of the shop together.\n- The app now counts how many devices use it, anonymously."
+    "my": "- ပြန်အမ်းထားသော၊ ပျက်စီး/သက်တမ်းကုန်သော နှင့် လွှဲပြောင်းသော ဆေးများသည် ၎င်းတို့၏ အသုတ် (lot) အတိုင်း မှန်ကန်ပါပြီ။\n- စက်နှစ်လုံးတွင် နှစ်ကြိမ် ပြန်အမ်းမိသော အရောင်းကို တစ်ကြိမ်သာ စာရင်းသွင်းပါသည်။\n- မီးဖိုချောင် မျက်နှာပြင် သို့မဟုတ် ကုန်လက်ကျန် စက်မှ အရောင်းနှင့် ငွေသား မှတ်တမ်းတင်၍ မရတော့ပါ။\n- ထပ်နေသော COD ငွေအပ်နှံမှုများ — အော်ဒါ ပို့ပြီးကြောင်း စက်သို့ နောက်ကျရောက်လည်း စာရင်း မှန်ကန်ပါပြီ။\n- ဒေတာညှိရာတွင် ကွဲလွဲမှုများ တွင် ဘာစစ်ရမည်ကို ပြပါပြီ။\n- ဖောက်သည်တစ်ဦးချင်းအတွက် အကြွေး သတိပေးပမာဏ။\n- ယခင် လစာစလစ်များတွင် အချိန်ပို နာရီကို ပြန်ပြပါပြီ။\n- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။",
+    "en": "- Medicine batches stay right after returns, damage/expiry write-offs and transfers.\n- A sale refunded twice on two devices is booked once.\n- Kitchen screens and stock devices can no longer record sales or cash.\n- Overlapping COD hand-ins stay right when a delivery reaches a device late.\n- Sync conflicts say what to check.\n- Credit warning per customer.\n- Older payslips show their overtime hours again.\n- Update all devices of the shop together."
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.37/ApexBOS-0.2.37-release.apk",
-      "sha256": "8ff5089ac7238f0ea83579112d38a3f32f993376ff09f90e9515f2417bfaa7fc"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.39/ApexBOS-0.2.39-release.apk",
+      "sha256": "c98c0661b49ff0d846445acebdb813614b8bcc429b0af869c3988ea8738a0ee7"
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "apex-upd-2026a",
-    "sig": "IldqPzUcd5q_LEmLoKO3WoB8Sp6SSlFGh9UosWId7yEUueVOPlArP00ROnx0SgcvCvJ8EUhFebiaCpZ9gn6WDw"
+    "sig": "La7nn96AZewgDZxB_fgFmhYcSoUKbglNQcc6rbY0CFQxTaURRMGu1seq-PfLjlH-aiGV_q5QVKzA-XsK40qhCQ"
   }
 }
