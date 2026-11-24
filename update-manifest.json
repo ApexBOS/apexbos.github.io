@@ -1,19 +1,19 @@
 {
-  "version": "0.2.39",
-  "publishedAt": "2026-11-22T11:30:00+06:30",
+  "version": "0.2.40",
+  "publishedAt": "2026-11-24T12:45:00+06:30",
   "notes": {
-    "my": "- ပြန်အမ်းထားသော၊ ပျက်စီး/သက်တမ်းကုန်သော နှင့် လွှဲပြောင်းသော ဆေးများသည် ၎င်းတို့၏ အသုတ် (lot) အတိုင်း မှန်ကန်ပါပြီ။\n- စက်နှစ်လုံးတွင် နှစ်ကြိမ် ပြန်အမ်းမိသော အရောင်းကို တစ်ကြိမ်သာ စာရင်းသွင်းပါသည်။\n- မီးဖိုချောင် မျက်နှာပြင် သို့မဟုတ် ကုန်လက်ကျန် စက်မှ အရောင်းနှင့် ငွေသား မှတ်တမ်းတင်၍ မရတော့ပါ။\n- ထပ်နေသော COD ငွေအပ်နှံမှုများ — အော်ဒါ ပို့ပြီးကြောင်း စက်သို့ နောက်ကျရောက်လည်း စာရင်း မှန်ကန်ပါပြီ။\n- ဒေတာညှိရာတွင် ကွဲလွဲမှုများ တွင် ဘာစစ်ရမည်ကို ပြပါပြီ။\n- ဖောက်သည်တစ်ဦးချင်းအတွက် အကြွေး သတိပေးပမာဏ။\n- ယခင် လစာစလစ်များတွင် အချိန်ပို နာရီကို ပြန်ပြပါပြီ။\n- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။",
-    "en": "- Medicine batches stay right after returns, damage/expiry write-offs and transfers.\n- A sale refunded twice on two devices is booked once.\n- Kitchen screens and stock devices can no longer record sales or cash.\n- Overlapping COD hand-ins stay right when a delivery reaches a device late.\n- Sync conflicts say what to check.\n- Credit warning per customer.\n- Older payslips show their overtime hours again.\n- Update all devices of the shop together."
+    "my": "- စက်တစ်လုံးတွင် ကုန်ပစ္စည်း လက်ခံလျှင် အခြားစက်များတွင်လည်း ပျမ်းမျှ ကုန်ကျစရိတ် တူညီပါပြီ။\n- ဝယ်ယူမှု အော်ဒါ၏ ပို့ဆောင်မှုကို စက်နှစ်လုံးတွင် ခွဲ၍ လက်ခံခဲ့လျှင် ဒုတိယ ပို့ဆောင်မှုကို တစ်ကြိမ်သာ ထည့်နိုင်ပါပြီ။\n- စက်နှစ်လုံးတွင် ပြီးဆုံးခဲ့သော ထုတ်လုပ်မှု အမိန့်ကို တစ်ကြိမ်သာ တွက်ပါသည်။\n- စက်နှစ်လုံးမှ မတူသော အသုတ်များဖြင့် ပို့ခဲ့သော လွှဲပြောင်းမှုကို ပထမ ပို့မှုဖြင့်သာ တွက်ပါသည်။\n- ဆိုင်၏ စက်အားလုံးကို တစ်ပြိုင်နက် အဆင့်မြှင့်ပါ။",
+    "en": "- Stock received on one device gives the same average cost on every device.\n- A purchase-order delivery split between two devices can be added once as a second delivery.\n- A production order completed on two devices counts once.\n- A transfer sent on two devices with different batches counts its first send.\n- Update all devices of the shop together."
   },
   "platforms": {
     "android": {
-      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.39/ApexBOS-0.2.39-release.apk",
-      "sha256": "c98c0661b49ff0d846445acebdb813614b8bcc429b0af869c3988ea8738a0ee7"
+      "url": "https://github.com/ApexBOS/apexbos.github.io/releases/download/v0.2.40/ApexBOS-0.2.40-release.apk",
+      "sha256": "83fba229bf586018a8a43fbdd52b044ca92ea5c810c811d6fce0d14050294b06"
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "apex-upd-2026a",
-    "sig": "La7nn96AZewgDZxB_fgFmhYcSoUKbglNQcc6rbY0CFQxTaURRMGu1seq-PfLjlH-aiGV_q5QVKzA-XsK40qhCQ"
+    "sig": "5IYk5LUfWNn8Khrw2QJsu_JSBwaSHNbHu_w8zkY43LFRKUnhNuy7ujSaj_93ra2ZvH7Om9ImSvg7Vw7f8QkdDg"
   }
 }
